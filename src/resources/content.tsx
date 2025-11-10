@@ -18,7 +18,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/sergey-gabrielyan-9b1a77215/",
+    link: "https://www.linkedin.com/in/sergey-gabrielyan/",
   },
   {
     name: "Drupal",
