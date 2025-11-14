@@ -46,9 +46,8 @@ const home: Home = {
   headline: <>Creating maintainable Drupal solutions</>,
   subline: (
       <>
-          I’m a Drupal Developer with nearly 2 years of experience building responsive, multilingual websites and clean,
-          maintainable solutions. I also created my Drupal 11 portfolio project, applying real-world skills and
-          exploring new techniques.
+          I’m Sergey, a Drupal Developer who builds organized, reliable, and high-quality website solutions. I apply
+          what I learn in real projects to my own work, where I explore new techniques and refine my skills.
       </>
   ),
 };
@@ -74,9 +73,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+          I’m a Drupal Developer with nearly two years of experience building responsive, multilingual websites and
+          clean, maintainable solutions. I also created my Drupal 11 portfolio project, applying real-world skills and
+          exploring new techniques to refine my craft.
       </>
     ),
   },
