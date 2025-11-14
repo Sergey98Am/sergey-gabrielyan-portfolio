@@ -84,27 +84,34 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Yerevan State University - website",
+        timeframe: "August 2022 - May 2023",
+        role: "Drupal Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+              Drupal Core Knowledge: Develops features for YSU’s website using Drupal 9, managing content types,
+              taxonomies, display modes, views, etc.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+              Front-End Development: Delivers responsive, design-aligned pages across devices by implementing Twig
+              templates and reusable components.
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          <>
+              Custom Module Development: Builds and extends custom modules to meet project-specific requirements,
+              ensuring maintainability and scalability.
+          </>,
+          <>
+              Multilingual Site Implementation: Assists in configuring multilingual features within Drupal, supporting
+              content accessibility in multiple languages.
+          </>,
+          <>
+              Version Control and Development Tooling: Manages code with GitLab, uses Drush for local development and
+              automation, and coordinates work with the team through merge requests.
+          </>,
+          <>
+              Teamwork and Collaboration: Coordinates with team members to implement functionality, troubleshoot issues,
+              and match designs.
+          </>,
         ],
       },
       {
