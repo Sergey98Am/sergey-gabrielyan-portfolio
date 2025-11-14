@@ -113,20 +113,29 @@ const about: About = {
               and match designs.
           </>,
         ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Vectus",
+        timeframe: "October 2021 - July 2022",
+        role: "Drupal Developer",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+            <>
+                Drupal Core Knowledge: Utilizes Drupal core features to fix bugs on content types, Views, custom
+                entities, and so on.
+            </>,
+            <>
+                Front-End Development: Develops responsive Twig templates aligned with design specifications to ensure
+                consistent cross-device user experiences.
+            </>,
+            <>
+                Custom Module Development: Builds and customizes modules to meet project-specific requirements,
+                extending Drupal functionality for client solutions.
+            </>,
+            <>
+                Version Control & Development Tooling: Manages source control via GitLab, executes site operations with
+                Drush, and uses Lando for local environment setup and testing.
+            </>,
         ],
         images: [],
       },
