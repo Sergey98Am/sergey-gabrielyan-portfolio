@@ -43,18 +43,13 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Creating maintainable Drupal solutions</>,
   subline: (
-    <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
+      <>
+          I’m a Drupal Developer with nearly 2 years of experience building responsive, multilingual websites and clean,
+          maintainable solutions. I also created my Drupal 11 portfolio project, applying real-world skills and
+          exploring new techniques.
+      </>
   ),
 };
 
