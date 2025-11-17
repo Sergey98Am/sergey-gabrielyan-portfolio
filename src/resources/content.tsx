@@ -89,27 +89,27 @@ const about: About = {
         role: "Drupal Developer",
         achievements: [
           <>
-              Drupal Core Knowledge: Develops features for YSU’s website using Drupal 9, managing content types,
+              Develops features for YSU’s website using Drupal 9, managing content types,
               taxonomies, display modes, views, etc.
           </>,
           <>
-              Front-End Development: Delivers responsive, design-aligned pages across devices by implementing Twig
+              Delivers responsive, design-aligned pages across devices by implementing Twig
               templates and reusable components.
           </>,
           <>
-              Custom Module Development: Builds and extends custom modules to meet project-specific requirements,
+              Builds and extends custom modules to meet project-specific requirements,
               ensuring maintainability and scalability.
           </>,
           <>
-              Multilingual Site Implementation: Assists in configuring multilingual features within Drupal, supporting
+              Assists in configuring multilingual features within Drupal, supporting
               content accessibility in multiple languages.
           </>,
           <>
-              Version Control and Development Tooling: Manages code with GitLab, uses Drush for local development and
+              Manages code with GitLab, uses Drush for local development and
               automation, and coordinates work with the team through merge requests.
           </>,
           <>
-              Teamwork and Collaboration: Coordinates with team members to implement functionality, troubleshoot issues,
+              Coordinates with team members to implement functionality, troubleshoot issues,
               and match designs.
           </>,
         ],
@@ -121,19 +121,19 @@ const about: About = {
         role: "Drupal Developer",
         achievements: [
             <>
-                Drupal Core Knowledge: Utilizes Drupal core features to fix bugs on content types, Views, custom
+                Utilizes Drupal core features to fix bugs on content types, Views, custom
                 entities, and so on.
             </>,
             <>
-                Front-End Development: Develops responsive Twig templates aligned with design specifications to ensure
+                Develops responsive Twig templates aligned with design specifications to ensure
                 consistent cross-device user experiences.
             </>,
             <>
-                Custom Module Development: Builds and customizes modules to meet project-specific requirements,
+                Builds and customizes modules to meet project-specific requirements,
                 extending Drupal functionality for client solutions.
             </>,
             <>
-                Version Control & Development Tooling: Manages source control via GitLab, executes site operations with
+                Manages source control via GitLab, executes site operations with
                 Drush, and uses Lando for local environment setup and testing.
             </>,
         ],
