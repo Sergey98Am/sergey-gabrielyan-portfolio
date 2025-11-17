@@ -159,68 +159,134 @@ const about: About = {
       },
     ],
   },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+    technical: {
+        display: true,
+        title: "Technical Skills",
+        skills: [
+            {
+                title: "General Development",
+                description: (
+                    <>Other tools and technologies I use for web development projects.</>
+                ),
+                tags: [
+                    { name: "Git" },
+                    { name: "GitLab" },
+                    { name: "Docker (Basic)" },
+                    { name: "REST APIs" },
+                    { name: "PHP" },
+                ],
+                images: [],
+            },
+            {
+                title: "Drupal",
+                description: (
+                    <>Building organized, maintainable, multilingual websites using Drupal.</>
+                ),
+                tags: [
+                    { name: "Views" },
+                    { name: "Content Types" },
+                    { name: "Taxonomy" },
+                    { name: "Blocks" },
+                    { name: "Menus" },
+                    { name: "Fields" },
+                    { name: "Image Optimization" },
+                    { name: "Drush" },
+                    { name: "Lando" },
+                    { name: "Composer" },
+                    { name: "Twig" },
+                    { name: "Custom Modules" },       // new
+                    { name: "Configuration Management" }, // new
+                    { name: "Multilingual" },         // new
+                ],
+                images: [],
+            },
+            // {
+            //     title: "Next.js",
+            //     description: (
+            //         <>Building next-gen apps with Next.js + Once UI + Supabase.</>
+            //     ),
+            //     tags: [
+            //         { name: "JavaScript", icon: "javascript" },
+            //         { name: "Next.js", icon: "nextjs" },
+            //         { name: "Supabase", icon: "supabase" },
+            //         { name: "React" },                // new
+            //         { name: "Tailwind CSS" },         // new if used in your projects
+            //     ],
+            //     images: [],
+            // },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
-    ],
-  },
+    },
+    // technical: {
+  //   display: true, // set to false to hide this section
+  //   title: "Technical skills",
+  //   skills: [
+  //     {
+  //       title: "Drupal",
+  //       description: (
+  //         <>Able to prototype in Figma with Once UI with unnatural speed.</>
+  //       ),
+  //       tags: [
+  //         {
+  //           name: "PHP",
+  //         },
+  //         {
+  //           name: "Views",
+  //         },
+  //         {
+  //           name: "Content Types",
+  //         },
+  //         {
+  //           name: "Taxonomy",
+  //         },
+  //         {
+  //           name: "Blocks",
+  //         },
+  //         {
+  //           name: "Menus",
+  //         },
+  //         {
+  //           name: "Fields",
+  //         },
+  //         {
+  //           name: "Drush",
+  //         },
+  //         {
+  //           name: "Lando",
+  //         },
+  //         {
+  //           name: "Composer",
+  //         },
+  //         {
+  //           name: "Twig",
+  //         },
+  //       ],
+  //       // optional: leave the array empty if you don't want to display images
+  //       images: [],
+  //     },
+  //     {
+  //       title: "Next.js",
+  //       description: (
+  //         <>Building next gen apps with Next.js + Once UI + Supabase.</>
+  //       ),
+  //       tags: [
+  //         {
+  //           name: "JavaScript",
+  //           icon: "javascript",
+  //         },
+  //         {
+  //           name: "Next.js",
+  //           icon: "nextjs",
+  //         },
+  //         {
+  //           name: "Supabase",
+  //           icon: "supabase",
+  //         },
+  //       ],
+  //       // optional: leave the array empty if you don't want to display images
+  //       images: [],
+  //     },
+  //   ],
+  // },
 };
 
 const work: Work = {
