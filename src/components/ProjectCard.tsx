@@ -16,6 +16,7 @@ interface ProjectCardProps {
   title: string;
   content: string;
   description: string;
+  codeLink: string;
   link: string;
 }
 
@@ -25,6 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   content,
   description,
+  codeLink,
   link,
 }) => {
   return (
@@ -67,6 +69,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 >
                   <Text variant="body-default-s">Read case study</Text>
                 </SmartLink>
+              )}
+              {codeLink && (
+                 <SmartLink
+                     suffixIcon="arrowUpRightFromSquare"
+                     style={{ margin: "0", width: "fit-content" }}
+                     href={codeLink}
+                 >
+                     <Text variant="body-default-s">View code</Text>
+                 </SmartLink>
               )}
               {link && (
                 <SmartLink
