@@ -166,7 +166,7 @@ const about: About = {
             {
                 title: "General Development",
                 description: (
-                    <>Other tools and technologies I use for web development projects.</>
+                    <>Tools and technologies I use for web development projects.</>
                 ),
                 tags: [
                     { name: "Git" },
@@ -174,6 +174,7 @@ const about: About = {
                     { name: "Docker (Basic)" },
                     { name: "REST APIs" },
                     { name: "PHP" },
+                    { name: "Drupal" },
                 ],
                 images: [],
             },
