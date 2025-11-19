@@ -71,11 +71,11 @@ const fonts: FontsConfig = {
 const style: StyleConfig = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  brand: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
+  border: "rounded", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
@@ -84,12 +84,12 @@ const style: StyleConfig = {
 const dataStyle: DataStyleConfig = {
   variant: "gradient", // flat | gradient | outline
   mode: "categorical", // categorical | divergent | sequential
-  height: 24, // default chart height
+  height: 30, // default chart height
   axis: {
-    stroke: "var(--neutral-alpha-weak)",
+    stroke: "var(--neutral-alpha-medium)",
   },
   tick: {
-    fill: "var(--neutral-on-background-weak)",
+    fill: "var(--neutral-on-background-medium)",
     fontSize: 11,
     line: false,
   },
