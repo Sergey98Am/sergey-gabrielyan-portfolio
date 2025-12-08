@@ -1,0 +1,37 @@
+---
+title: "Hero Banner System"
+---
+
+Implemented a flexible hero banner system with short and tall variations and responsive image optimization using different crops per screen size. Pages can adjust height, heading size, text position on the banner, the text block appearing on or below it — while key content types use a fixed layout that only allows text position adjustments for consistency.
+
+What Implemented:
+
+- **Two Banner Variations**
+  - Short and tall hero formats
+  - Optimized with different aspect ratios per screen size (Art Direction approach)
+  - Implemented using Drupal Responsive Image Styles
+- **Responsive Aspect Ratios**
+  - Short Banner:
+      - Portrait (4:5) at small screens
+      - Square at ≥640px
+      - Ultra-wide (21:9) at ≥768px
+      - Super-wide (32:9) at ≥1280px
+  - Tall Banner:
+      - Portrait (2:3) at small screens
+      - 4:5 at ≥640px
+      - Wide (16:9) at ≥768px
+      - Ultra-wide (21:9) at ≥1280px
+- **Flexible Controls for Editors**
+    Pages such as basic pages or those with custom menus can:
+    - Choose between short or tall layouts
+    - Adjust heading size
+    - Set text position on the banner
+    - Choose whether the text block appears on or below the banner
+- **Fixed Layouts on Content Types**
+    Key content types — such as academic pages (Faculty, Department, Educational Program) and News/Event pages — use a predefined hero banner layout. On these pages, only text position adjustments and content on or out of hero banner are allowed, avoiding confusion from having different pages of the same type with inconsistent layouts and heights.
+- **Banner Content Support**
+    Each Hero Banner supports:
+      - Title
+      - Description
+      - Call-to-Action button
+      - Text block appearing on or below the banner
