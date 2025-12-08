@@ -1,0 +1,25 @@
+---
+title: "Flexible Academic"
+---
+
+Implemented a flexible academic structure to organize Faculties, Departments, and Educational Programs. Each one manages its own content, menus, and displays relevant blocks such as News, Events, and Educational Programs on the pages they belong to.
+
+What Implemented:
+
+- **Academic Hierarchy:**
+  - Faculties
+  - Departments (belong to Faculties)
+  - Educational Programs (belong to Faculties — required)
+  - Educational Programs (can optionally belong to Departments)
+  - Programs are also linked to Degrees (e.g., B.A. → Undergraduate)
+- **Dedicated Pages & Content Display:**
+    A block of Educational Programs automatically appears on Faculty and Department pages or any page that belongs to a specific academic unit.
+- **Content Relationships:**
+    News and Events can belong to:
+    - Faculties
+    - Departments
+    - Educational Programs
+- **Dynamic Block Visibility:**
+    Group-based relationships ensure that only relevant content appears in the correct academic area (e.g., Faculty News on Faculty pages).
+- **Multilingual Menus:**
+    Each academic unit has its own separate menus (English & Armenian), allowing independent navigation structures per language for flexibility and clarity.
