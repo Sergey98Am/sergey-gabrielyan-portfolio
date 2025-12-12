@@ -2,27 +2,546 @@
 title: "News and Events"
 ---
 
+import {ActionList} from "../../../../components/ActionList";
+
 Implemented dynamic filtering, pagination, and content relationships for News and Events — all without a full page reload. Filter and pagination parameters are visible in the URL, ensuring shareable links.
 
 **What Implemented:**
 
-- **Filtering System:**
-  - News → filtered by categories
-  - Events → filtered by types, categories, and audience
-  - Ajax-based filtering without full page reload
-  - Pagination with URL parameters visible
-- **Related Content:**
-    Each News or Event page automatically displays related items based on shared categories, improving content discovery and engagement.
-- **Academic Relationships:**
-Both News and Events can belong to:
-  - Faculties
-  - Departments
-  - Educational Programs
-- **Sitewide Option:**
-    If a News or Event item belongs to a specific academic unit, the *sitewide* checkbox allows it to also appear in the general listings across the site.
-- **Sticky Items:**
-    Items marked as *sticky* appear first in the listing, ensuring higher visibility.
-- **International Approach (Events):**
-    When creating an event, a country can be selected as part of the address — enabling an international approach similar to real universities hosting global events.
-- **Timezone Selection (Events):**
-    Events require selecting the correct timezone during creation. This ensures the event time is stored and displayed accurately, especially for international events. Selecting the proper timezone prevents issues such as incorrect sorting, events appearing at the wrong hour, or mismatched times between the editor’s local timezone and the event’s actual location.
+[//]: # (- **Filtering System:**)
+
+[//]: # (  - News → filtered by categories)
+
+[//]: # (  - Events → filtered by types, categories, and audience)
+
+[//]: # (  - Ajax-based filtering without full page reload)
+
+[//]: # (  - Pagination with URL parameters visible)
+
+[//]: # (- **Related Content:**)
+
+[//]: # (    Each News or Event page automatically displays related items based on shared categories, improving content discovery and engagement.)
+
+[//]: # (- **Academic Relationships:**)
+
+[//]: # (Both News and Events can belong to:)
+
+[//]: # (  - Faculties)
+
+[//]: # (  - Departments)
+
+[//]: # (  - Educational Programs)
+
+[//]: # (- **Sitewide Option:**)
+
+[//]: # (    If a News or Event item belongs to a specific academic unit, the *sitewide* checkbox allows it to also appear in the general listings across the site.)
+
+[//]: # (- **Sticky Items:**)
+
+[//]: # (    Items marked as *sticky* appear first in the listing, ensuring higher visibility.)
+
+[//]: # (- **International Approach &#40;Events&#41;:**)
+
+[//]: # (    When creating an event, a country can be selected as part of the address — enabling an international approach similar to real universities hosting global events.)
+
+[//]: # (- **Timezone Selection &#40;Events&#41;:**)
+
+[//]: # (    Events require selecting the correct timezone during creation. This ensures the event time is stored and displayed accurately, especially for international events. Selecting the proper timezone prevents issues such as incorrect sorting, events appearing at the wrong hour, or mismatched times between the editor’s local timezone and the event’s actual location.)
+<ActionList
+    items={[
+        {
+            label: "Filtering System",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            items: [
+                {
+                    label: "News → filtered by categories",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Events → filtered by types, categories, and audience",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Ajax-based filtering without full page reload",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Pagination with URL parameters visible",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Related Content",
+            text: "Each News or Event page automatically displays related items based on shared categories, improving content discovery and engagement.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+        },
+        {
+            label: "Academic Relationships",
+            text: "Both News and Events can belong to",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            items: [
+                {
+                    label: "Faculties",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Departments",
+                },
+                {
+                    label: "Educational Programs",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+            ]
+        },
+        {
+            label: "Sitewide Option",
+            text: "If a News or Event item belongs to a specific academic unit, the *sitewide* checkbox allows it to also appear in the general listings across the site.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+        },
+        {
+            label: "Sticky Items",
+            text: "Items marked as sticky appear first in the listing, ensuring higher visibility.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+        },
+        {
+            label: "International Approach (Events)",
+            text: "When creating an event, a country can be selected as part of the address — enabling an international approach similar to real universities hosting global events.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+        },
+        {
+            label: "Timezone Selection (Events)",
+            text: "Events require selecting the correct timezone during creation. This ensures the event time is stored and displayed accurately, especially for international events. Selecting the proper timezone prevents issues such as incorrect sorting, events appearing at the wrong hour, or mismatched times between the editor’s local timezone and the event’s actual location.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+        },
+    ]}
+/>

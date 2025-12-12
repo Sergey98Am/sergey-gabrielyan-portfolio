@@ -27,6 +27,8 @@ import {
   Line,
 } from "@once-ui-system/core";
 
+import {ActionList} from "@/components/ActionList";
+
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
   children: ReactNode;
@@ -202,6 +204,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  ActionList,
 };
 
 type CustomMDXProps = MDXRemoteProps & {

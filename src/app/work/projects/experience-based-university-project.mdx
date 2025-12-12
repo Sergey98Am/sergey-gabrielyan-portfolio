@@ -10,10 +10,7 @@ codeLink: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/"
 link: "https://live-serggab-university.pantheonsite.io/"
 ---
 
-import {
-    SmartLink,
-    Text,
-} from "@once-ui-system/core";
+import {ActionList} from "../../../components/ActionList";
 
 ## Overview
 
@@ -21,47 +18,67 @@ Development of a flexible and highly customizable design system using Next.js fo
 
 ## Key Features
 
-- **Responsive Image Optimization**: Implemented a performance-focused system using Drupal Responsive Images, allowing the browser to load the most suitable image size based on screen size.
-    <SmartLink suffixIcon="arrowRight" href={`/work/experience-based-university-project/responsive-image-optimization`}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-- **Multilingual Menu System**: Built separate English and Armenian menus for full navigation control. This allows different menu item counts and ordering per language, and avoids forced translation when items have no direct equivalent.
-    <SmartLink suffixIcon="arrowRight" href={"/work/experience-based-university-project/multilingual-menu-system"}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-- **News & Events**: Implemented pages with dynamic filtering and pagination without a full page reload, with the URL showing filter and pagination parameters. Each item automatically displays related News & Events based on shared categories, and both can also belong to Faculties, Departments, and Educational Programs. Events include timezone selection to avoid incorrect times when events happen in different time zones.
-    <SmartLink suffixIcon="arrowRight" href={"/work/experience-based-university-project/news-and-events"}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-- **Flexible Academic Structure**: Implemented a flexible academic structure to organize Faculties, Departments, and Educational Programs. Each one manages related content, has its own menus, and displays blocks such as News, Events, and Educational Programs on the pages they belong to.
-    <SmartLink suffixIcon="arrowRight" href={"/work/experience-based-university-project/flexible-academic-structure"}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-- **Hero Banner System**: Built a flexible hero banner with short and tall variations and responsive image optimization using different crops per screen size. Pages can adjust height, heading size, text position on the banner, the text block appearing on or below it — while key content types use a fixed layout that only allows text position adjustments for consistency.
-    <SmartLink suffixIcon="arrowRight" href={"/work/experience-based-university-project/hero-banner-system"}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-- **Reusable Components System**: Built flexible components using the Drupal Paragraphs module, allowing editors to create page layouts through drag-and-drop. Some components support custom headings, backgrounds, and layout options, giving editors freedom to structure pages without developer assistance.
-    <SmartLink suffixIcon="arrowRight" href={"/work/experience-based-university-project/reusable-components-system"}>
-        <Text variant="body-default-s">Details</Text>
-    </SmartLink>
-
-## Technologies Used
-
-- **Next.js**: For fast, server-rendered React applications.
-- **Figma**: For creating and managing design assets and prototypes.
-- **Styled-Components**: For styling React components with a modular, themable approach.
-- **Storybook**: For building an interactive, documented component library.
-
-## Challenges and Learnings
-
-One key challenge was balancing the need for flexibility with the desire to maintain design consistency. The solution involved creating well-defined design tokens and establishing clear guidelines for when and how components could be customized. Additionally, setting up effective collaboration workflows between designers and developers using Figma and Git was a learning experience that greatly improved the process.
-
-## Outcome
-
-The design system is now actively used across multiple projects, leading to faster development cycles, fewer design inconsistencies, and improved collaboration between design and development teams. It has become a foundation for scaling our products efficiently while ensuring a cohesive user experience.
+<ActionList
+    items={[
+        {
+            label: "Responsive Image Optimization",
+            text: "Implemented a performance-focused system using Drupal Responsive Images, allowing the browser to load the most suitable image size based on screen size.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Multilingual Menu System",
+            text: "Built separate English and Armenian menus for full navigation control. This allows different menu item counts and ordering per language, and avoids forced translation when items have no direct equivalent.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/multilingual-menu-system',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "News & Events",
+            text: "Implemented pages with dynamic filtering and pagination without a full page reload, with the URL showing filter and pagination parameters. Each item automatically displays related News & Events based on shared categories, and both can also belong to Faculties, Departments, and Educational Programs. Events include timezone selection to avoid incorrect times when events happen in different time zones.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/news-and-events',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Flexible Academic Structure",
+            text: "Implemented a flexible academic structure to organize Faculties, Departments, and Educational Programs. Each one manages related content, has its own menus, and displays blocks such as News, Events, and Educational Programs on the pages they belong to.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/flexible-academic-structure',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Hero Banner System",
+            text: "Built a flexible hero banner with short and tall variations and responsive image optimization using different crops per screen size. Pages can adjust height, heading size, text position on the banner, the text block appearing on or below it — while key content types use a fixed layout that only allows text position adjustments for consistency.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/hero-banner-system',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Reusable Components System",
+            text: "Built flexible components using the Drupal Paragraphs module, allowing editors to create page layouts through drag-and-drop. Some components support custom headings, backgrounds, and layout options, giving editors freedom to structure pages without developer assistance.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/reusable-components-system',
+                    label: 'Details',
+                },
+            ],
+        },
+    ]}
+/>

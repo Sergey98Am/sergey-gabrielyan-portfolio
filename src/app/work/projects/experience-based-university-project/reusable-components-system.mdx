@@ -2,46 +2,884 @@
 title: "Reusable Components System"
 ---
 
+import {ActionList} from "../../../../components/ActionList";
+
 Implemented a robust set of reusable Drupal Paragraph components that allow editors to build pages using flexible, drag-and-drop blocks. Some components support optional settings such as custom heading size and background color, giving editors design flexibility without requiring theme changes.
 
 **What Implemented:**
 
-- **Core Paragraph Features**
-  - Customizable heading size
-  - Background color options
-  - Flexible drag-and-drop layout control
-  - Rich media support (images, videos, text)
-  - Consistent styling across all components
-- **Components (Drupal Paragraphs)**
-  - **Accordion → Accordion Item**\
-    Expandable sections for organizing structured content.
-  - **Block**\
-    Allows placing any Drupal block inside a paragraph and choosing its position — providing layout control.
-  - **Cards → Card**\
-    Standard card layouts for text and images.
-  - **Cards – Overlay → Card – Overlay**\
-    Displays text **on the card image** (overlay effect).
-  - **Carousel – Multi AutoWidth → Carousel – Multi AutoWidth – Item**\
-    Keeps the aspect ratio of images while maintaining a consistent height.
-  - **Carousel – Split → Carousel – Split – Item**\
-    Carousel split into two 50/50 parts — one side is text and the other is an image, with the ability to swap sides (left ↔ right).
-  - **Counter → Counter Item**\
-    Shows numbers (e.g., achievements or quantities) that animate upwards when scrolled into view.
-  - **Fixed Scroll Effect → Fixed Scroll Effect – Item**\
-    When the paragraph is reached, the background is fixed, and as items (cards) scroll, the background updates to match the active card.
-  - **Links with Media**\
-    One side contains text with links, and the other side shows an image or video — similar to a split layout.
-  - **Logos → Logo**\
-    Logos carousel with autoplay and the ability to pause it.
-  - **Quick Links**\
-    A small block with a list of useful links — helpful for highlighting important actions or frequently used pages.
-  - **Tabs → Tab**\
-    Tabs component where each tab can contain its own text block, cards, or card overlay content.
-  - **Testimonials → Testimonial**\
-    Testimonials carousel, each with text and an image.
-  - **Text Block**\
-    Text block with image editing support (CKEditor). The purpose of this paragraph is to allow text content to be dragged and dropped anywhere on the page.
-  - **Text with Media**\
-    Text with image or video, with the ability to swap sides.
-  - **View Block**\
-    Ability to place ready-made blocks (such as News, Events, etc. — Drupal View blocks) inside the layout to allow dragging and dropping.
+<ActionList
+    items={[
+        {
+            label: "Core Paragraph Features",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            items: [
+                {
+                    label: "Customizable heading size",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Background color options",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Flexible drag-and-drop layout control",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Rich media support (images, videos, text)",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Consistent styling across all components",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Components (Drupal Paragraphs)",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            items: [
+                {
+                    label: "Accordion → Accordion Item",
+                    text: "Expandable sections for organizing structured content.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Block",
+                    text: "Allows placing any Drupal block inside a paragraph and choosing its position — providing layout control.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Cards → Card",
+                    text: "Standard card layouts for text and images.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Cards – Overlay → Card – Overlay",
+                    text: "Displays text on the card image (overlay effect).",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Carousel – Multi AutoWidth → Carousel – Multi AutoWidth – Item",
+                    text: "Keeps the aspect ratio of images while maintaining a consistent height.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Carousel – Split → Carousel – Split – Item",
+                    text: "Carousel split into two 50/50 parts — one side is text and the other is an image, with the ability to swap sides (left ↔ right).",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Counter → Counter Item",
+                    text: "Shows numbers (e.g., achievements or quantities) that animate upwards when scrolled into view.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Fixed Scroll Effect → Fixed Scroll Effect – Item",
+                    text: "When the paragraph is reached, the background is fixed, and as items (cards) scroll, the background updates to match the active card.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Links with Media",
+                    text: "One side contains text with links, and the other side shows an image or video — similar to a split layout.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Logos → Logo",
+                    text: "Logos carousel with autoplay and the ability to pause it.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Quick Links",
+                    text: "A small block with a list of useful links — helpful for highlighting important actions or frequently used pages.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Tabs → Tab",
+                    text: "Tabs component where each tab can contain its own text block, cards, or card overlay content.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Testimonials → Testimonial",
+                    text: "Testimonials carousel, each with text and an image.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Text Block",
+                    text: "Text block with image editing support (CKEditor). The purpose of this paragraph is to allow text content to be dragged and dropped anywhere on the page.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Text with Media",
+                    text: "Text with image or video, with the ability to swap sides.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "View Block",
+                    text: "Ability to place ready-made blocks (such as News, Events, etc. — Drupal View blocks) inside the layout to allow dragging and dropping.",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+            ],
+        },
+    ]}
+/>
