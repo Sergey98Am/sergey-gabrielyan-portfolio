@@ -10,6 +10,7 @@ import {
     Column,
     SmartLink,
     Text,
+    Swiper,
 } from "@once-ui-system/core";
 
 type ActionLink = {
@@ -17,11 +18,29 @@ type ActionLink = {
     label: string;
 };
 
-type ActionDialog = {
+type SwiperItem = {
+    slide: string | React.ReactNode;
+    alt?: string;
+};
+
+type ActionDialog =
+    | {
+    // 🟢 Carousel dialog
+    modalCarousel: true;
+    modalCarouselItems: SwiperItem[];
+
     label?: string;
     title?: string;
     description?: string;
+    }
+    | {
+    // 🔵 Regular dialog
+    modalCarousel?: false;
     content: React.ReactNode;
+
+    label?: string;
+    title?: string;
+    description?: string;
 };
 
 type ActionListItem = {
@@ -154,9 +173,20 @@ export function ActionList({items}: ActionListProps) {
                         onClose={() => setOpenDialog(null)}
                         title={d.title ?? "Details"}
                         description={d.description}
+                        style={{ maxWidth: 900 }}
                     >
-                        <Column gap="16">
-                            {d.content}
+                        <Column fillWidth gap="16" marginTop="12">
+                            {d.modalCarousel ? (
+                                <Swiper items={d.modalCarouselItems} style={{ maxWidth: 900, margin: '0 auto' }} />
+                            ) : (
+                                d.content
+                            )}
+
+                            <Button
+                                label="Close"
+                                variant="secondary"
+                                onClick={() => setOpenDialog(null)}
+                            />
                         </Column>
                     </Dialog>
                 ))

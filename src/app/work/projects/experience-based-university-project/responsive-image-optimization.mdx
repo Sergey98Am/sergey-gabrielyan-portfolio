@@ -24,14 +24,11 @@ Implemented a performance-focused system using **Drupal Responsive Image Styles*
                     label: 'Label 1',
                     title: 'Title 1',
                     description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "/images/1.jpg", alt: "Image 1" },
+                        { slide: "/images/2.jpg", alt: "Image 2" },
+                    ],
                 },
                 {
                     label: 'Label 2',
