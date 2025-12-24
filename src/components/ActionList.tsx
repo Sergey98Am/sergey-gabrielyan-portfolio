@@ -98,7 +98,7 @@ export function ActionList({items}: ActionListProps) {
                         style={{margin: "0", width: "fit-content"}}
                         href={href}
                     >
-                        <Text variant="body-default-s">View code</Text>
+                        <Text variant="body-default-s">{label}</Text>
                     </SmartLink>
                 );
             })}

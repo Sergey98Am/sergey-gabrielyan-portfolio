@@ -1,0 +1,242 @@
+import {ActionList} from "../../../../../components/ActionList";
+
+## Overview
+
+Built and extended Drupal functionality with custom and contributed modules, event subscribers, and patches, carefully selecting contributed modules from Drupal.org.
+
+## Contributed Modules Usage
+
+The project uses a carefully selected set of contributed modules to handle content structure, relationships, filtering, and user experience:
+
+<ActionList
+    items={[
+        {
+            label: "Group, Group Content Menu",
+            text: "Used for faculties, departments, educational programs, and site sections with their own menus. Site Section is a group type for pages not tied to faculties, departments, or programs, which can also have their own menu and structured content.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Paragraphs",
+            text: "Used for flexible content creation, allowing editors to build complex page layouts without custom code.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Menu Item Extras",
+            text: "Extended menu items with additional fields to support advanced navigation structures.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Better Exposed Filters, Views Ajax History, Views Infinite Scroll",
+            text: "Improved Views usability by enhancing filters, AJAX navigation, and progressive content loading.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Views Reference, Block Field",
+            text: "Used to place Views blocks and custom blocks inside Paragraphs, allowing easy drag-and-drop placement across pages.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Dependent Fields",
+            text: "Used in educational program forms to dynamically filter departments by faculty, implemented with an Entity Reference view, improving data accuracy and the editor experience.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Smart Date",
+            text: "Used for event date management, allowing timezone configuration per event and simplifying date creation (for example, quickly setting 1-hour or 2-hour events).",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/technical-implementations/custom-drupal-architecture-and-extensions',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Tailwind Merge Classes",
+            text: "A custom module for clean and consistent Tailwind CSS class merging, ensuring that when conflicting classes are used (for example, bg-primary-main and bg-neutral-main), only the last one is applied.",
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/tailwind_merge_classes',
+                    label: 'Module link',
+                },
+            ],
+        },
+    ]}
+/>
+
+## Custom Module Development
+
+Several custom modules were created to keep related functionality together and avoid creating many small modules.
+
+**serggab_common**
+
+Created as a shared utility module to handle cross-project functionality instead of creating many small single-purpose modules.
+
+<ActionList
+    items={[
+        {
+            label: "Custom Field Formatters",
+            items: [
+                {
+                    label: "BodyWithSummary formatter",
+                    text: "Used in the Search view mode to allow searching across both body and summary fields, in Views.",
+                    links: [
+                        {
+                            label: "Formatter code",
+                            href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/blob/master/web/modules/custom/serggab_university_common/src/Plugin/Field/FieldFormatter/BodyWithSummaryFormatter.php?ref_type=heads",
+                        }
+                    ]
+                },
+                {
+                    label: "DayMonthYearRange formatter",
+                    text: "Designed for events to remove duplicate day, month, or year values when they are the same, improving date readability.",
+                    links: [
+                        {
+                            label: "Formatter code",
+                            href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/blob/master/web/modules/custom/serggab_university_common/src/Plugin/Field/FieldFormatter/DayMonthYearRangeFormatter.php?ref_type=heads",
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            label: "User Interface Translations",
+            text: "Implemented UI translations using .po files for consistent multilingual support.",
+            links: [
+                {
+                    label: ".po file code",
+                    href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/blob/master/web/modules/custom/serggab_university_common/translations/serggab_university_common.hy.po?ref_type=heads",
+                }
+            ]
+        },
+        {
+            label: "Configuration-Based Features",
+            items: [
+                {
+                    text: "Mega menu enable/disable settings.",
+                },
+                {
+                    text: "Site-wide enable/disable functionality for content visibility.",
+                },
+            ]
+        },
+        {
+            label: "Content Visibility Control",
+            text: "When creating news or events inside faculty, department, or educational program pages, editors can check or uncheck a sitewide field to choose whether the content appears on the global news page or only within the related group.",
+        },
+    ]}
+/>
+
+**serggab_groups**
+
+This module adds project-specific logic to the Group module.
+
+<ActionList
+    items={[
+        {
+            label: "Automated Degree Node Management",
+            items: [
+                {
+                    text: "During educational program creation, taxonomy terms such as degree levels (e.g. M.S.) are checked.",
+                },
+                {
+                    text: "On save, related degree nodes are automatically created and assigned to the educational program.",
+                },
+                {
+                    text: "This allows the same degree taxonomy (e.g. “M.S.”) to have different descriptions across multiple educational programs.",
+                },
+                {
+                    text: "Degree nodes are automatically updated or removed when the educational program is updated or deleted.",
+                },
+            ]
+        },
+        {
+            label: "Event Subscriber Usage",
+            text: "All automated content creation and synchronization logic is implemented using event subscribers to keep the system decoupled and maintainable.",
+            links: [
+                {
+                    label: "Event Subscriber code",
+                    href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/tree/master/web/modules/custom/serggab_groups/src?ref_type=heads",
+                }
+            ]
+        },
+        {
+            label: "Custom Group Blocks",
+            items: [
+                {
+                    label: "Graduate and Undergraduate Programs Block",
+                    text: "Displays group-related programs filtered by taxonomy degree type (graduate / undergraduate).",
+                    links: [
+                        {
+                            label: "Block code",
+                            href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/blob/master/web/modules/custom/serggab_groups/src/Plugin/Block/ProgramsByLevelBlock.php?ref_type=heads",
+                        }
+                    ]
+                },
+                {
+                    label: "Program Degrees by Level Block",
+                    text: "Used on single educational program pages to display related degree nodes filtered by level.",
+                    links: [
+                        {
+                            label: "Block code",
+                            href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/blob/master/web/modules/custom/serggab_groups/src/Plugin/Block/ProgramDegreesByLevelBlock.php?ref_type=heads",
+                        }
+                    ]
+                },
+            ]
+        },
+    ]}
+/>
+
+**hero_banner**
+
+A custom module created to standardize hero banner usage across the site.
+
+<ActionList
+    items={[
+        {
+            text: "Exposes the hero banner view mode as a reusable block.",
+            links: [
+                {
+                    label: "Module code",
+                    href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/-/tree/master/web/modules/custom/hero_banner?ref_type=heads",
+                }
+            ]
+        },
+        {
+            text: "Allows hero banners to be displayed consistently wherever the view mode is used."
+        },
+        {
+            text: "Supports inheriting and displaying group hero banners on child pages such as related news and events, ensuring visual consistency across group-based content."
+        },
+    ]}
+/>
