@@ -1,0 +1,128 @@
+import {ActionList} from "../../../../../components/ActionList";
+
+## Overview
+
+Group types ((Faculties > Departments) > Programs) link each other via Entity Reference fields, each using its own menu via Group Content Menu module. News, Events, and Basic Pages act as both independent content types and Group Content. Site Sections are independent groups with own menus.
+
+<ActionList
+    items={[
+        {
+            label: "Group-Based Content Structure",
+            text: "Using the Group module, Faculties, Departments, Educational Programs, and Site Sections are defined as separate groups with independent content and menu management.",
+            dialogs: [
+                {
+                    label: 'Configuration - Group types',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769102200/Portfolio/SergGab%20University/Screenshot_2026-01-22_at_21.15.46_ktlpyy.png", alt: "Image 1" },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculties-and-departments',
+                    label: 'List - Faculties and Departments',
+                },
+            ],
+        },
+        {
+            label: "Faculty → Department Relationship",
+            text: "Each Department is linked to exactly one Faculty via an Entity Reference field on the Department Group; this enforces a strict hierarchical structure and ensures no department exists without a parent faculty.",
+            dialogs: [
+                {
+                    label: 'Configuration - Entity Reference field',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_Entity Reference - Faculty/v1769103222/Portfolio/SergGab%20University/Screenshot_2026-01-22_at_21.31.02_d3bvgy.png", alt: "Image 1" },
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_Entity Reference - Faculty - 2/v1769103713/Portfolio/SergGab%20University/Screenshot_2026-01-22_at_21.41.28_vjmvdh.png", alt: "Image 1" },
+                    ],
+                },
+                {
+                    label: 'Department Form - Entity Reference Faculty',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_Form -- Entity Reference Faculty field/v1769112146/Portfolio/SergGab%20University/Screenshot_2026-01-23_at_00.02.02_pj7v6w.png", alt: "Image 1" },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Educational Program Relationships",
+            text: "Educational Programs belong to one required Faculty and may optionally be linked to a Department, implemented via two Entity Reference fields, where the Department options are filtered based on the selected Faculty in the form.",
+            dialogs: [
+                {
+                    label: 'Program Form - Entity Reference field',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769513362/Portfolio/SergGab%20University/Facutlties_and_Departments_ajax_form_vx0pe3.gif", alt: "Image 1" },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "News & Events",
+            text: "News and Events are independent content types (nodes) with their own standalone pages, and they are also enabled as Group relationships for Faculty, Department, and Educational Program groups, allowing each academic unit to have its own scoped News and Events.",
+            dialogs: [
+                {
+                    label: 'Content Types - News/Event',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769515111/Portfolio/SergGab%20University/News_and_Events_config_hctubw.png", alt: "Image 1" },
+                    ],
+                },
+                {
+                    label: 'Configuration - Group News/Event',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_Entity Reference - Faculty/v1769516871/Portfolio/SergGab%20University/Group_News_and_Events_qbz88h.png", alt: "Image 1" },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/news',
+                    label: 'List - News',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/events',
+                    label: 'List - Events',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1/news',
+                    label: 'List - Group News',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1/events',
+                    label: 'List - Group Events',
+                },
+            ],
+        },
+        {
+            label: "Creating Group-Specific Content",
+            text: "The Group module allows editors to create new News or Events directly within a Group, as well as attach existing News or Events to a Group. This provides flexibility while ensuring that content is correctly linked to the appropriate Faculty, Department, or Program.",
+            dialogs: [
+                {
+                    label: 'Configuration - Group Content',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769515111/Portfolio/SergGab%20University/News_and_Events_config_hctubw.png", alt: "Image 1" },
+                    ],
+                },
+            ],
+        },
+    ]}
+/>

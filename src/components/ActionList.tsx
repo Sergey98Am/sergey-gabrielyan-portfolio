@@ -146,7 +146,7 @@ export function ActionList({items}: ActionListProps) {
                             </Column>
 
                             {!item.links?.length && !item.dialogs?.length ? null : (
-                                <Row gap="8">
+                                <Row gap="12" wrap>
                                     {actions(item, index)}
                                 </Row>
                             )}
