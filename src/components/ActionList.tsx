@@ -117,7 +117,7 @@ export function ActionList({items}: ActionListProps) {
     return (
         <>
             <List>
-                {items.map((item, index) => (
+                {items?.map((item, index) => (
                     <ListItem key={index} marginBottom="16">
                         <Column gap="12">
                             <Column gap="8" vertical="center">
