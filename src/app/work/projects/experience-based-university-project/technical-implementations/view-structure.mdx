@@ -1,0 +1,733 @@
+import {ActionList} from "../../../../../components/ActionList";
+
+## Overview
+
+Project uses view pages: Faculties & Departments, News, Events, Group News / Events, Departments; blocks: Related News / Events (showing same-category items on single pages), Group News / Events, Undergraduate / Graduate Programs (required for faculties, optional for departments).
+
+<ActionList
+    items={[
+        {
+            label: "View - Faculties and Departments",
+            text: "Displays all Faculties with their own Departments. Reversed relationship: Group referenced from the field_department_faculty field.",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculties-and-departments',
+                    label: 'Page',
+                },
+            ],
+        },
+        {
+            label: "View - Departments",
+            text: "Displays all Departments belonging Faculty.",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616191/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_1_kwhypr_b_rgb_C2C9D6_c_pad_ar_16_9_yglasy.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616191/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_2_ee8q9l_b_rgb_C2C9D6_c_pad_ar_16_9_dasrdw.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616192/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_3_e85ivc_b_rgb_C2C9D6_c_pad_ar_16_9_m8g5aj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616192/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_4_z9yyjt_b_rgb_C2C9D6_c_pad_ar_16_9_ghi3ih.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616192/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_5_uaoqbd_b_rgb_C2C9D6_c_pad_ar_16_9_njokty.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771616192/Portfolio/SergGab%20University/View%20Structure/Departments/Departments_-_6_a8qhdj_b_rgb_C2C9D6_c_pad_ar_16_9_pkt6fr.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1/departments',
+                    label: 'Page',
+                },
+            ],
+        },
+        {
+            label: "View - News: Main",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 1/v1770728389/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_1_zxrrhy.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 2/v1770728387/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_2_jg3opj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 3/v1770728391/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_3_lqdd2d.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 4/v1770728392/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_4_rkodqe.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 5/v1770728394/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_5_xey5bc.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 6/v1770728396/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20page%20-%20Main%20news%20lisitng/View_page_-_Main_news_listing_-_6_nh0s87.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 1/v1770732004/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_1_tr9pio.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 2/v1770732017/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_2_fomwe9.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 3/v1770732006/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_3_yyyf17.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 4/v1770732009/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_4_huxswt.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 5/v1770732012/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_5_ia0z9e.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View page - Main news listing - 6/v1770732014/Portfolio/SergGab%20University/View%20Structure/News:%20Main/View%20block%20-%20main%20news/View_block_-_Main_news_-_6_b1zrnf.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/news',
+                    label: 'Page',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/',
+                    label: 'Block',
+                },
+            ],
+        },
+        {
+            label: "View - News: Group (Faculty/Department/Program related)",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740439/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_1_ehuiwt_View_page_-_Group_news_listing_-_1_m3aevf.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740441/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_2_figffb_View_page_-_Group_news_listing_-_2_nmcjze.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740442/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_3_ysxy05_View_page_-_Group_news_listing_-_3_azuctw.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740441/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_4_bk7ytk_View_page_-_Group_news_listing_-_4_xav2xu.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740439/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_5_wjvcge_View_page_-_Group_news_listing_-_5_znyitj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770740440/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20page%20-%20Group%20news%20listing/View_page_-_Group_news_listing_-_6_xzbj6p_View_page_-_Group_news_listing_-_6_wq3mhd.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741780/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_1_d4bqcd_b_rgb_C2C9D6_c_pad_ar_16_9_oivojn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741782/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_2_xm5lhg_b_rgb_C2C9D6_c_pad_ar_16_9_pqer52.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741779/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_3_qeibxc_b_rgb_C2C9D6_c_pad_ar_16_9_sbenci.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741777/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_4_xh5qmd_b_rgb_C2C9D6_c_pad_ar_16_9_pzua2n.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741782/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_5_qurgq8_b_rgb_C2C9D6_c_pad_ar_16_9_s7yfnd.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770741778/Portfolio/SergGab%20University/View%20Structure/News:%20Group/View%20block%20-%20Group%20news/View_block_-_Group_news_-_6_hthjtl_b_rgb_C2C9D6_c_pad_ar_16_9_ybr7u4.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1/news',
+                    label: 'Page',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1',
+                    label: 'Block',
+                },
+            ],
+        },
+        {
+            label: "View - Events: Main",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606052/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_1_ezyuis_b_rgb_C2C9D6_c_pad_ar_16_9_lefea9.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606054/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_2_nxfkol_b_rgb_C2C9D6_c_pad_ar_16_9_p1cszd.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606053/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_3_ar4v49_b_rgb_C2C9D6_c_pad_ar_16_9_nz2op2.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606055/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_4_f8qwa5_b_rgb_C2C9D6_c_pad_ar_16_9_wrkggx.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606056/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_5_bgqj0t_b_rgb_C2C9D6_c_pad_ar_16_9_mmrdkm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606058/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_6_cgo6ye_b_rgb_C2C9D6_c_pad_ar_16_9_gvckqw.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606057/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Page/Main_Events_listing_-_7_ihkdxi_b_rgb_C2C9D6_c_pad_ar_16_9_sznkim.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606896/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_1_awpk28_b_rgb_C2C9D6_c_pad_ar_16_9_bteaxd.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606899/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_2_nrmetv_b_rgb_C2C9D6_c_pad_ar_16_9_zrdplg.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606897/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_3_keg9uk_b_rgb_C2C9D6_c_pad_ar_16_9_wb3yje.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606900/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_4_meajpc_b_rgb_C2C9D6_c_pad_ar_16_9_oqpc36.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606901/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_5_yfzyfa_b_rgb_C2C9D6_c_pad_ar_16_9_idbozo.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771606902/Portfolio/SergGab%20University/View%20Structure/Events:%20Main/View%20Block/Main_Events_Block_-_6_i9xqwt_b_rgb_C2C9D6_c_pad_ar_16_9_apnf8i.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/events',
+                    label: 'Page',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/',
+                    label: 'Block',
+                },
+            ],
+        },
+        {
+            label: "View - Events: Group (Faculty/Department/Program related)",
+            dialogs: [
+                {
+                    label: 'Page Config',
+                    title: 'Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609396/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_1_baz0ui_b_rgb_C2C9D6_c_pad_ar_16_9_ulnew7.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609400/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_2_d3hl3v_b_rgb_C2C9D6_c_pad_ar_16_9_c3wf8w.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609403/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_3_isyscj_b_rgb_C2C9D6_c_pad_ar_16_9_ksn26m.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609398/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_4_th29kd_b_rgb_C2C9D6_c_pad_ar_16_9_mitpit.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609402/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_5_epfggr_b_rgb_C2C9D6_c_pad_ar_16_9_xtvwmy.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609406/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_6_szfq04_b_rgb_C2C9D6_c_pad_ar_16_9_h6oet6.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771609407/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Page/Group_Events_Link_-_7_kmiiev_b_rgb_C2C9D6_c_pad_ar_16_9_xjkjni.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610315/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_1_iqqyuy_b_rgb_C2C9D6_c_pad_ar_16_9_bzcdrq.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610317/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_2_ad2dm1_b_rgb_C2C9D6_c_pad_ar_16_9_m0cavi.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610319/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_3_glswjp_b_rgb_C2C9D6_c_pad_ar_16_9_qgbvkw.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610324/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_4_spwp1b_b_rgb_C2C9D6_c_pad_ar_16_9_zn7l0s.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610320/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_5_eqmho2_b_rgb_C2C9D6_c_pad_ar_16_9_fhats9.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771610322/Portfolio/SergGab%20University/View%20Structure/Events:%20Group/View%20Block/Events_Block_-_6_d4gymh_b_rgb_C2C9D6_c_pad_ar_16_9_vs089o.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1/events',
+                    label: 'Page',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/1',
+                    label: 'Block',
+                },
+            ],
+        },
+        {
+            label: "View - Related News/Events - Single News/Event Page",
+            text: "Group News/Events do not appear on the main News/Events listing page unless the sitewide boolean is checked. The same logic applies to Related News/Events: if a single News/Events item belongs to a group, only related News/Events from that same group is displayed on the single News/Events page. This is handled using two separate blocks: one for sitewide News/Events and another for group-related News/Events.",
+            dialogs: [
+                {
+                    label: 'News - Block Config',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744969/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_1_yrffee_b_rgb_C2C9D6_c_pad_ar_16_9_gj1uh2.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744971/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_2_vd42tl_b_rgb_C2C9D6_c_pad_ar_16_9_g66fqf.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744972/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_3_pnwdmt_b_rgb_C2C9D6_c_pad_ar_16_9_zrcngm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744974/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_4_bei0xj_b_rgb_C2C9D6_c_pad_ar_16_9_xs5wep.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744973/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_5_ecenqu_b_rgb_C2C9D6_c_pad_ar_16_9_t94gqp.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770744976/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Main%20News/Related_Main_News_-_6_tmgmkz_b_rgb_C2C9D6_c_pad_ar_16_9_ghvrsl.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Group News - Block Config',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746050/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_1_wv7x5x_b_rgb_C2C9D6_c_pad_ar_16_9_ax33ob.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746048/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_2_mhnwed_b_rgb_C2C9D6_c_pad_ar_16_9_w9fcqh.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746051/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_3_ynz0ou_b_rgb_C2C9D6_c_pad_ar_16_9_vkvxgk.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746053/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_4_cuidpp_b_rgb_C2C9D6_c_pad_ar_16_9_qhmjtk.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746055/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_5_kodwpz_b_rgb_C2C9D6_c_pad_ar_16_9_vtjjym.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1770746055/Portfolio/SergGab%20University/View%20Structure/News:%20Related/Group%20News/Related_Group_News_-_6_tu3bzp_b_rgb_C2C9D6_c_pad_ar_16_9_tm2rla.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Events - Block Config',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612003/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_1_k33trk_b_rgb_C2C9D6_c_pad_ar_16_9_b833jc.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612005/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_2_rcp4x7_b_rgb_C2C9D6_c_pad_ar_16_9_oir4te.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612010/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_3_h8rx00_b_rgb_C2C9D6_c_pad_ar_16_9_ojuhor.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612007/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_4_nuj6qq_b_rgb_C2C9D6_c_pad_ar_16_9_oalika.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612012/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_5_a0p6ns_b_rgb_C2C9D6_c_pad_ar_16_9_rhzav7.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771612015/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Main%20Events/Main_Related_Events_-_6_gjor7r_b_rgb_C2C9D6_c_pad_ar_16_9_phd1ed.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Group Events - Block Config',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771614050/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_1_f9pkmk_b_rgb_C2C9D6_c_pad_ar_16_9_itv2k8.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771613999/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_2_djcp96_b_rgb_C2C9D6_c_pad_ar_16_9_lb1gtp.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771614067/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_3_l9gmq7_b_rgb_C2C9D6_c_pad_ar_16_9_iurqdj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771614062/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_4_ie2fgq_b_rgb_C2C9D6_c_pad_ar_16_9_mbhnua.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771614062/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_5_v32p6x_b_rgb_C2C9D6_c_pad_ar_16_9_sispja.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771614024/Portfolio/SergGab%20University/View%20Structure/Events:%20Related/Group%20Events/Group_Related_Events_-_6_bczo9r_b_rgb_C2C9D6_c_pad_ar_16_9_egrmn0.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/node/87',
+                    label: 'News - Block',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/node/216',
+                    label: 'Group News - Block',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/node/192',
+                    label: 'Events - Block',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/node/227',
+                    label: 'Group Events - Block',
+                },
+            ],
+        },
+        {
+            label: "View - Educational Programs",
+            text: "Undergraduate and graduate Educational Programs (groups) that belong to a Faculty or Department are listed on their respective pages. The Educational Program group type is connected to the Faculty or Department via an entity reference field.",
+            dialogs: [
+                {
+                    label: 'By Faculty - Block Config',
+                    title: 'By Faculty - Block Config',
+                    description: 'The Graduate view block is the same as the Undergraduate one; the only differences are the title, the filter criteria value (‘Graduate’ instead of ‘Undergraduate’), and the view machine name.',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929593/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_1_looh3s_b_rgb_C2C9D6_c_pad_ar_16_9_sotd1o.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929594/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_2_kplvzg_b_rgb_C2C9D6_c_pad_ar_16_9_lpeqcv.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929596/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_3_gyuajg_b_rgb_C2C9D6_c_pad_ar_16_9_k4ofab.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929594/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_4_k0ljws_b_rgb_C2C9D6_c_pad_ar_16_9_nfafje.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929595/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_5_xziw1h_b_rgb_C2C9D6_c_pad_ar_16_9_b5slpq.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771929595/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Faculty%20Related/Programs_-_6_uf2loj_b_rgb_C2C9D6_c_pad_ar_16_9_qc09hk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'By Department - Block Config',
+                    title: 'By Department - Block Config',
+                    description: 'The Graduate view block is the same as the Undergraduate one; the only differences are the title, the filter criteria value (‘Graduate’ instead of ‘Undergraduate’), and the view machine name.',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771930784/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_1_exdiad_b_rgb_C2C9D6_c_pad_ar_16_9_gslqt0.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771930785/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_2_r9knsz_b_rgb_C2C9D6_c_pad_ar_16_9_xaov01.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771930785/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_3_aewmqg_b_rgb_C2C9D6_c_pad_ar_16_9_vewv3y.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771931106/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_3_m04fqq_b_rgb_C2C9D6_c_pad_ar_16_9_dhzsgv.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771930787/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_5_srzcrp_b_rgb_C2C9D6_c_pad_ar_16_9_r3jmwk.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771930788/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Department%20Related/Programs_-_6_tbuenn_b_rgb_C2C9D6_c_pad_ar_16_9_jyfr0b.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculty/arts-and-humanities',
+                    label: 'By Faculty - Block',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/department/history',
+                    label: 'By Department - Block',
+                },
+            ],
+        },
+        {
+            label: "View - Program Degrees",
+            text: "The Graduate Degrees view block is the same as the Undergraduate one; the only differences are the title, the filter criteria value for degree level (‘Graduate’ instead of ‘Undergraduate’), and the view machine name.",
+            dialogs: [
+                {
+                    label: 'Degrees - Block Config',
+                    title: 'Degrees - Block Config',
+                    description: 'The Graduate view block is the same as the Undergraduate one; the only differences are the title, the filter criteria value (‘Graduate’ instead of ‘Undergraduate’), and the view machine name.',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936387/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_1_avtw0g_b_rgb_C2C9D6_c_pad_ar_16_9_asg0lh.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936388/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_2_tyo4ql_b_rgb_C2C9D6_c_pad_ar_16_9_umityw.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936388/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_3_it136j_b_rgb_C2C9D6_c_pad_ar_16_9_lrf0mx.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936388/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_4_nte7rl_b_rgb_C2C9D6_c_pad_ar_16_9_l5kai3.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936388/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_5_ds6den_b_rgb_C2C9D6_c_pad_ar_16_9_mtsph4.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771936389/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Program%20Degrees/Program_Degrees_-_6_brqpbw_b_rgb_C2C9D6_c_pad_ar_16_9_fi2y5i.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/28',
+                    label: 'Degrees - Block',
+                },
+            ],
+        },
+        {
+            label: "View - Entity Reference",
+            text: "Entity reference view for faculty-related departments; it’s used in the Educational Program form through the Dependent Fields contrib module to choose departments related to the chosen faculty.",
+            dialogs: [
+                {
+                    label: 'View Config',
+                    title: 'View Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939099/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_1_oocoyr_b_rgb_C2C9D6_c_pad_ar_16_9_nh86bj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939099/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_2_ynscok_b_rgb_C2C9D6_c_pad_ar_16_9_vnhshd.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939100/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_3_nfn0ky_b_rgb_C2C9D6_c_pad_ar_16_9_ih3ue5.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939100/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_4_gsjhsq_b_rgb_C2C9D6_c_pad_ar_16_9_bqslx0.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939099/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_5_f5gcl5_b_rgb_C2C9D6_c_pad_ar_16_9_lfbexm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1771939099/Portfolio/SergGab%20University/View%20Structure/Educational%20Programs/Entity%20Reference%20-%20Faculty%20-%20Department/Entitly_Reference_-_Faculty_-_Department_-_6_nmb8tv_b_rgb_C2C9D6_c_pad_ar_16_9_h9rgmb.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Program Form',
+                    title: 'Program Form',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769513362/Portfolio/SergGab%20University/Facutlties_and_Departments_ajax_form_vx0pe3.gif", alt: "Image 1" },
+                    ],
+                },
+            ],
+        },
+    ]}
+/>
