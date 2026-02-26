@@ -1,0 +1,282 @@
+import {ActionList} from "../../../../../components/ActionList";
+
+## Overview
+
+Built and extended Drupal functionality with custom and contributed modules, event subscribers, and patches, carefully selecting contributed modules from Drupal.org.
+
+## Contributed Modules Usage
+
+The project uses a carefully selected set of contributed modules to handle content structure, relationships, filtering, and user experience:
+
+<ActionList
+    items={[
+        {
+            label: "Group, Group Content Menu",
+            text: "Used for faculties, departments, educational programs, and site sections with their own menus. Site Section is a group type for pages not tied to faculties, departments, or programs, which can also have their own menu and structured content.",
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/group',
+                    label: 'Module - Group',
+                },
+                {
+                    href: 'https://www.drupal.org/project/group_content_menu',
+                    label: 'Module - Group Content Menu',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculty/arts-and-humanities',
+                    label: 'Faculty with own menu',
+                },
+            ],
+        },
+        {
+            label: "Paragraphs",
+            text: "Used for flexible content creation, allowing editors to build complex page layouts without custom code.",
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/paragraphs',
+                    label: 'Module',
+                },
+            ],
+        },
+        {
+            label: "Menu Item Extras",
+            text: "Extended menu items with additional fields to support advanced navigation structures.",
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/menu_item_extras',
+                    label: 'Module',
+                },
+            ],
+        },
+        {
+            label: "Better Exposed Filters",
+            text: "Used for a Date Picker filter and collapsible filter sections.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772105589/Portfolio/SergGab%20University/Contributed%20Modules/Better%20Exposed%20Filters/BEF_-_1_fj6gli_b_rgb_C2C9D6_c_pad_ar_16_9_v2rzaz.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772105590/Portfolio/SergGab%20University/Contributed%20Modules/Better%20Exposed%20Filters/BEF_-_2_k6ybog_b_rgb_C2C9D6_c_pad_ar_16_9_ctjecb.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772105592/Portfolio/SergGab%20University/Contributed%20Modules/Better%20Exposed%20Filters/BEF_-_3_ollpks_b_rgb_C2C9D6_c_pad_ar_16_9_ah4lcc.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772105591/Portfolio/SergGab%20University/Contributed%20Modules/Better%20Exposed%20Filters/BEF_-_4_ypwyjb_b_rgb_C2C9D6_c_pad_ar_16_9_wlaj4j.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772105593/Portfolio/SergGab%20University/Contributed%20Modules/Better%20Exposed%20Filters/BEF_-_5_bdsoxa_b_rgb_C2C9D6_c_pad_ar_16_9_ovrzg8.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/better_exposed_filters',
+                    label: 'Module',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/news',
+                    label: 'News Filter',
+                },
+            ],
+        },
+        {
+            label: "Views Ajax History",
+            text: "Enabled bookmaking of AJAX views. Supports filters and paging.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772106991/Portfolio/SergGab%20University/Contributed%20Modules/Views%20Ajax%20History/Views_Ajax_History_-_1_qcrvkh_b_rgb_C2C9D6_c_pad_ar_16_9_bsrphc.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772106993/Portfolio/SergGab%20University/Contributed%20Modules/Views%20Ajax%20History/Views_Ajax_History_-_2_uaiylg_b_rgb_C2C9D6_c_pad_ar_16_9_dkv1yq.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/views_ajax_history',
+                    label: 'Module',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/news?page=2',
+                    label: 'Pagination link',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/news?field_news_date_value=2025-07-01&field_news_date_value_1=2026-08-16&field_news_categories_target_id[6]=6&field_news_categories_target_id[16]=16&field_news_categories_target_id[4]=4',
+                    label: 'Filter link',
+                },
+            ],
+        },
+        {
+            label: "Views Infinite Scroll",
+            text: "Used for Educational Programs listings on Faculty/Department pages as a 'Load more' button instead of pagination.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772108886/Portfolio/SergGab%20University/Contributed%20Modules/Infinite%20Scroll/Infinite_Scroll_-_1_mie06y_b_rgb_C2C9D6_c_pad_ar_16_9_ussbqj.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772108890/Portfolio/SergGab%20University/Contributed%20Modules/Infinite%20Scroll/Infinite_Scroll_-_2_fbng1d_b_rgb_C2C9D6_c_pad_ar_16_9_jpdjby.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772108889/Portfolio/SergGab%20University/Contributed%20Modules/Infinite%20Scroll/Infinite_Scroll_-_3_fdyqxe_b_rgb_C2C9D6_c_pad_ar_16_9_aaut91.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772108887/Portfolio/SergGab%20University/Contributed%20Modules/Infinite%20Scroll/Infinite_Scroll_-_4_fxjoiq_b_rgb_C2C9D6_c_pad_ar_16_9_o6eoqv.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/views_infinite_scroll',
+                    label: 'Module',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculty/arts-and-humanities',
+                    label: 'Programs Listing',
+                },
+            ],
+        },
+        {
+            label: "Views Reference",
+            text: "Used to place views blocks inside Paragraphs, allowing easy drag-and-drop placement across pages.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772115809/Portfolio/SergGab%20University/Contributed%20Modules/Views%20Reference/Views_Reference_sfopu4_b_rgb_C2C9D6_c_pad_ar_16_9_noqmt5.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772117937/Portfolio/SergGab%20University/Contributed%20Modules/Views%20Reference/Views_Reference_-_2_tvtvbn_b_rgb_C2C9D6_c_pad_ar_16_9_gogg0q.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/viewsreference',
+                    label: 'Module',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/faculty/arts-and-humanities',
+                    label: 'News/Events blocks',
+                },
+            ],
+        },
+        {
+            label: "Block Field",
+            text: "Used to place custom blocks inside Paragraphs, allowing easy drag-and-drop placement across pages.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772115835/Portfolio/SergGab%20University/Contributed%20Modules/Block/Block_n3ritr_b_rgb_C2C9D6_c_pad_ar_16_9_nozh4s.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772119689/Portfolio/SergGab%20University/Contributed%20Modules/Block/Block_-_2_w9csrd_b_rgb_C2C9D6_c_pad_ar_16_9_caiqpv.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/block_field',
+                    label: 'Module',
+                },
+                {
+                    href: 'https://live-serggab-university.pantheonsite.io/group/29',
+                    label: 'Degrees',
+                },
+            ],
+        },
+        {
+            label: "Dependent Fields",
+            text: "Used in educational program forms to dynamically filter departments by faculty, implemented with an Entity Reference view, improving data accuracy and the editor experience.",
+            dialogs: [
+                {
+                    label: 'Program Form - Entity Reference field',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1769513362/Portfolio/SergGab%20University/Facutlties_and_Departments_ajax_form_vx0pe3.gif", alt: "Image 1" },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/dependent_fields',
+                    label: 'Module',
+                },
+            ],
+        },
+        {
+            label: "Smart Date",
+            text: "Used for event date management, allowing timezone configuration per event and simplifying date creation (for example, quickly setting 1-hour or 2-hour events).",
+            dialogs: [
+                {
+                    label: 'Event Form',
+                    title: 'Event Form',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1772122317/Portfolio/SergGab%20University/Contributed%20Modules/Smart%20Date/Smart_Date_gztksa_b_rgb_C2C9D6_c_pad_ar_16_9_txeyf5.png", alt: "Image 1" },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/smart_dates',
+                    label: 'Module',
+                },
+            ],
+        },
+        {
+            label: "Tailwind Merge Classes",
+            text: "A custom module for clean and consistent Tailwind CSS class merging, ensuring that when conflicting classes are used (for example, bg-primary-main and bg-neutral-main), only the last one is applied.",
+            links: [
+                {
+                    href: 'https://www.drupal.org/project/tailwind_merge_classes',
+                    label: 'Module',
+                },
+            ],
+        },
+    ]}
+/>
