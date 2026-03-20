@@ -1,0 +1,117 @@
+## Pages
+
+<ActionList
+    items={[
+        {
+            label: "Faculties and Departments",
+            text: "All Faculties with their own Departments",
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Page',
+                },
+            ],
+        },
+        {
+            label: "Departments",
+            text: "Faculty-Related Departments",
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Page',
+                },
+            ],
+        },
+    ]}
+/>
+
+## Drupal Technical Details
+
+### Relationships
+
+<ActionList
+    items={[
+        {
+            label: "Faculty → Department",
+            text: "Each Department is linked to exactly one Faculty via an Entity Reference field on the Department Group; this enforces a strict hierarchical structure and ensures no department exists without a parent faculty.",
+            dialogs: [
+                {
+                    label: 'Configuration - Entity Reference Field',
+                    title: 'Configuration - Entity Reference Field',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+                {
+                    label: 'Department Form - Entity Reference Faculty',
+                    title: 'Department Form - Entity Reference Faculty',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+    ]}
+/>
+
+### Views config
+
+<ActionList
+    items={[
+        {
+            label: "Faculties and Departments page",
+            text: "Reversed relationship: Group referenced from the field_department_faculty field.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Departments page",
+            text: "Straight relationship: Group using field_department_faculty field.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+    ]}
+/>
+
+### Contributed Modules Usage
+
+<ActionList
+    items={[
+        {
+            label: "Group",
+        },
+        {
+            label: "Group Content Menus",
+        },
+    ]}
+/>
