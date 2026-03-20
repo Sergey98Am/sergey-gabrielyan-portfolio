@@ -1,0 +1,106 @@
+---
+title: "Personal project showcasing work skills"
+summary: "Development of the personal university project using skills gained from work experience and new learnings."
+images:
+  - "/images/projects/project-01/cover-01.jpg"
+  - "/images/projects/project-01/cover-02.jpg"
+  - "/images/projects/project-01/cover-03.jpg"
+  - "/images/projects/project-01/cover-04.jpg"
+codeLink: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/"
+link: "https://live-serggab-university.pantheonsite.io/"
+---
+
+import {ActionList} from "../../../components/ActionList";
+import {SmartLink} from "@once-ui-system/core";
+
+## Overview
+
+Development of the personal university project using skills gained from work experience and new learnings.
+
+## Structure
+
+Faculties can have Departments, and both can have Educational Programs (Programs are required to belong to a Faculty, but may optionally belong to a Department). Each one has its own menus, pages, and blocks such as News and Events. There are also global News and Events that are not tied to a specific Faculty/Department/Program.
+
+<ActionList
+    items={[
+        {
+            label: "Faculties and Departments",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Educational Programs",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "News and Events",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+    ]}
+/>
+
+## Multilingual Menu System
+
+Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.
+
+<SmartLink href='/link' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Details</Text>
+</SmartLink>
+
+## Presentation and Media
+
+<ActionList
+    items={[
+        {
+            label: "Hero Banner System",
+            text: "Built a flexible hero banner with short and tall variants and configurable text placement (on or below the banner). Key content types use a fixed layout with limited text positioning to ensure consistency.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Responsive Image Optimization",
+            text: "Implemented a performance-focused system that allows the browser to load the most suitable image size based on screen size.",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+        {
+            label: "Manual Cropping",
+            links: [
+                {
+                    href: '/work/experience-based-university-project/responsive-image-optimization',
+                    label: 'Details',
+                },
+            ],
+        },
+    ]}
+/>
+
+## Frontend and Reusable Components
+
+Built a best-practice frontend architecture with flexible, reusable components that empower editors to build page layouts via drag-and-drop without requiring developer support.
+
+<SmartLink href='/link' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Details</Text>
+</SmartLink>
