@@ -1,0 +1,215 @@
+## Program Listings
+
+<ActionList
+    items={[
+        {
+            label: "Faculty-Related Programs",
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Page',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Programs Screenshot',
+                    title: 'Programs Screenshot',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Department-Related Programs",
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Page',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Programs Screenshot',
+                    title: 'Programs Screenshot',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Program Degrees",
+            text: "Educational programs include undergraduate degrees – Bachelor of Arts, Bachelor of General Arts – and graduate degrees – Master of Arts, Master of Science – and so on.",
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Page',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Degrees Screenshot',
+                    title: 'Degrees Screenshot',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+    ]}
+/>
+
+## Drupal Technical Details
+
+### Relationships
+
+Each Program is linked to exactly one Faculty and, optionally, to a Department through two Entity Reference fields—one for Faculty and one for Department—on the Educational Program Group. This structure enforces a strict hierarchy and ensures that no Program exists without a parent Faculty.
+
+### Form
+
+Department options are filtered based on the selected Faculty in the form.
+
+### Views config
+
+<ActionList
+    items={[
+        {
+            label: "Program Block by Faculty",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Program Block by Department",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Program Degrees",
+            text: "The Graduate Degrees view block is the same as the Undergraduate one; the only differences are the title, the filter criteria value for degree level (‘Graduate’ instead of ‘Undergraduate’), and the view machine name.",
+            dialogs: [
+                {
+                    label: 'Config',
+                    title: 'Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+        {
+            label: "Entity Reference",
+            text: "Entity reference view for faculty-related departments; it’s used in the Educational Program form through the Dependent Fields contrib module to choose departments related to the chosen faculty.",
+            dialogs: [
+                {
+                    label: 'View Config',
+                    title: 'View Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+                {
+                    label: 'Program Form',
+                    title: 'Program Form',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "",
+                            alt: "Image 1"
+                        },
+                    ]
+                },
+            ],
+        },
+    ]}
+/>
+
+### Custom Module(s)
+
+<ActionList
+    items={[
+        {
+            label: "serggab_common",
+            items: [
+                {
+                    label: "Degree Selection",
+                    text: "During the creation of an Educational Program group, we select degrees that are stored as taxonomy terms.",
+                },
+                {
+                    label: "Automatic Degree Creation",
+                    text: "An Event Subscriber in the module automatically creates Degrees (Degree content type) that belong to that group based on the selected taxonomy terms.",
+                },
+                {
+                    label: "Result",
+                    text: "This approach allows each Program to have its own Degree content with a unique description and its own page.",
+                    dialogs: [
+                        {
+                            label: 'Content Type - Degree',
+                            title: 'Content Type - Degree',
+                            modalCarousel: true,
+                            modalCarouselItems: [
+                                {
+                                    slide: "",
+                                    alt: "Image 1"
+                                },
+                            ]
+                        },
+                        {
+                            label: 'Taxonomy - Degrees',
+                            title: 'Taxonomy - Degrees',
+                            modalCarousel: true,
+                            modalCarouselItems: [
+                                {
+                                    slide: "",
+                                    alt: "Image 1"
+                                },
+                            ]
+                        },
+                    ],
+                },
+            ],
+        },
+    ]}
+/>
