@@ -66,48 +66,493 @@ Implemented pages with dynamic filtering and pagination without a full page relo
 
 The Sitewide option allows a news or event to appear in the general site listings. If a news or event belongs to an academic unit, selecting the Sitewide checkbox makes it visible across the main site. If it is not linked to an academic unit, Sitewide is enabled automatically and the checkbox is hidden.
 
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Form",
+            title: "Form",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
 ## Sticky Items
 
 Items marked as sticky appear first in the listing, ensuring higher visibility.
 
-## Drupal Technical Details
-
-### Relationships
-
-<ActionList
+<LightboxCarouselModal
     items={[
         {
-            label: "Faculty → Department",
-            text: "Each Department is linked to exactly one Faculty via an Entity Reference field on the Department Group; this enforces a strict hierarchical structure and ensures no department exists without a parent faculty.",
-            dialogs: [
-                {
-                    label: 'Configuration - Entity Reference Field',
-                    title: 'Configuration - Entity Reference Field',
-                    modalCarousel: true,
-                    modalCarouselItems: [
-                        {
-                            slide: "",
-                            alt: "Image 1"
-                        },
-                    ]
-                },
-                {
-                    label: 'Department Form - Entity Reference Faculty',
-                    title: 'Department Form - Entity Reference Faculty',
-                    modalCarousel: true,
-                    modalCarouselItems: [
-                        {
-                            slide: "",
-                            alt: "Image 1"
-                        },
-                    ]
-                },
+            label: "Form",
+            title: "Form",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+## International Approach (Events)
+
+When creating an event, a country can be selected as part of the address — enabling an international approach similar to real universities hosting global events.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Form",
+            title: "Form",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+## Timezone Selection (Events)
+
+Events require selecting the correct timezone during creation. This ensures the event time is stored and displayed accurately, especially for international events. Selecting the proper timezone prevents issues such as incorrect sorting, events appearing at the wrong hour, or mismatched times between the editor’s local timezone and the event’s actual location.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Form",
+            title: "Form",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+## Drupal Technical Details
+
+News and Events are independent content types (nodes) with their own standalone pages, and they are also enabled as Group relationships for Faculty/Department/Program groups, allowing each academic unit to have its own scoped News and Events.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Content Types - News/Event",
+            title: "Content Types - News/Event",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+        {
+            label: "Configuration - Group News/Event",
+            title: "Configuration - Group News/Event",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
             ],
         },
     ]}
 />
 
 ### Views config
+
+<ActionList
+    items={[
+        {
+            label: "News: Main",
+            dialogs: [
+                {
+                    label: 'Listing Page Config',
+                    title: 'Listing Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "News: Group (Faculty/Department/Program related)",
+            dialogs: [
+                {
+                    label: 'Listing Page Config',
+                    title: 'Listing Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Events: Main",
+            dialogs: [
+                {
+                    label: 'Listing Page Config',
+                    title: 'Listing Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Events: Group (Faculty/Department/Program related)",
+            dialogs: [
+                {
+                    label: 'Listing Page Config',
+                    title: 'Listing Page Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Block Config',
+                    title: 'Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Related News/Events - Single News/Event Page",
+            text: "Group News/Events do not appear on the main News/Events listing page unless the sitewide boolean is checked. The same logic applies to Related News/Events: if a single News/Events item belongs to a group, only related News/Events from that same group is displayed on the single News/Events page. This is handled using two separate blocks: one for sitewide News/Events and another for group-related News/Events.",
+            dialogs: [
+                {
+                    label: 'News - Block Config',
+                    title: 'News - Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Group News - Block Config',
+                    title: 'Group News - Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Events - Block Config',
+                    title: 'Events - Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+                {
+                    label: 'Group Events - Block Config',
+                    title: 'Group Events - Block Config',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+        },
+    ]}
+/>
 
 ### Contributed Modules Usage
 
