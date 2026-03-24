@@ -28,6 +28,7 @@ import {
 } from "@once-ui-system/core";
 
 import {ActionList} from "@/components/ActionList";
+import {LightboxCarouselModal} from "@/components/LightboxCarouselModal";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -204,6 +205,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  LightboxCarouselModal,
   ActionList,
 };
 
