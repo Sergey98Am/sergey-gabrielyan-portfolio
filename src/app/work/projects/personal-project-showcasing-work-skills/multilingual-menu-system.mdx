@@ -1,275 +1,39 @@
----
-title: "Multilingual Menu System"
----
+## Overview
 
-Implemented a flexible multilingual navigation system using a **separate-menu structure** for each language (English & Armenian). This approach provides full control over menu content and hierarchy per language, without relying on translation settings or forced synchronization.
+Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.
 
-**What Implemented:**
+<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Main Menu - English</Text>
+</SmartLink>
 
-<ActionList
+<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Main Menu - Armenian</Text>
+</SmartLink>
+
+<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Local (page-specific) Menu - English</Text>
+</SmartLink>
+
+<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Local (page-specific) Menu - Armenian</Text>
+</SmartLink>
+
+<LightboxCarouselModal
     items={[
         {
-            label: "Dedicated Menus Per Language",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-            ],
+            label: "Main Menu",
+            title: "Main Menu",
             items: [
-                {
-                    label: "Main Navigation (English)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Main Navigation (Armenian)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Secondary Navigation (English)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Secondary Navigation (Armenian)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
+                { slide: <img src="/img1.jpg" /> },
             ],
         },
         {
-            label: "Independent Navigation Logic",
-            text: "Each language can have its own number of menu items, ordering, and structure — without being required to mirror another language. This also helps when certain words do not have a direct translation.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-            ],
-        },
-        {
-            label: "Improved UX for Native Users",
-            text: "Enables language-specific wording and a natural navigation flow, resulting in better usability and a localized browsing experience.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
+            label: "Local (page-specific) Menu",
+            title: "Local (page-specific) Menu",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
             ],
         },
     ]}
 />
+
