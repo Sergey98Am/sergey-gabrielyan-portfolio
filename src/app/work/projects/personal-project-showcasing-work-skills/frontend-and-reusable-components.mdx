@@ -1,0 +1,721 @@
+## Overview
+
+Built a best-practice frontend architecture with flexible, reusable components that empower editors to build page layouts via drag-and-drop without requiring developer support.
+
+## Components (Drupal Paragraphs)
+
+<ActionList
+    items={[
+        {
+            label: "Accordion → Accordion Item",
+            text: "Expandable sections for organizing structured content.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Block",
+            text: "Allows placing any Drupal block inside a component and choosing its position — providing layout control.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Cards → Card",
+            text: "Standard card layouts for text and images.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Cards – Overlay → Card – Overlay",
+            text: "Displays text on the card image (overlay effect).",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Carousel – Multi AutoWidth → Carousel – Multi AutoWidth – Item",
+            text: "Carousel with original image widths. Keeps the aspect ratio of images while maintaining a consistent height.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Carousel – Split → Carousel – Split – Item",
+            text: "Carousel split into two 50/50 parts — one side is text and the other is an image, with the ability to swap sides (left ↔ right).",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Counter → Counter Item",
+            text: "Shows numbers (e.g., achievements or quantities) that animate upwards when scrolled into view.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Fixed Scroll Effect → Fixed Scroll Effect – Item",
+            text: "When the component is reached, the background is fixed, and as items (cards) scroll, the background updates to match the active card.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Links with Media",
+            text: "One side contains text with links, and the other side shows an image or video — similar to a split layout.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Logos → Logo",
+            text: "Logos carousel with autoplay and the ability to pause it.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Quick Links",
+            text: "A small block with a list of useful links — helpful for highlighting important actions or frequently used pages.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Tabs → Tab",
+            text: "Tabs component where each tab can contain its own text block, cards, or card overlay content.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Testimonials → Testimonial",
+            text: "Testimonials carousel, each with text and an image.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Text Block",
+            text: "Text block with image editing support (CKEditor). The purpose of this component is to allow text content to be dragged and dropped anywhere on the page.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "Text with Media",
+            text: "Text with image or video, with the ability to swap sides.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+        {
+            label: "View Block",
+            text: "Ability to place ready-made blocks (such as News, Events, etc. — Drupal View blocks) inside the layout to allow dragging and dropping.",
+            dialogs: [
+                {
+                    label: 'Image',
+                    title: 'Image',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
+                },
+            ],
+            links: [
+                {
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'In page',
+                },
+            ],
+        },
+    ]}
+/>
+
+## Technical Details
+
+### Frontend Tools
+
+<ActionList
+    items={[
+        {
+            label: "Tailwind CSS",
+        },
+        {
+            label: "Alpine.js",
+        },
+    ]}
+/>
+
+### Design System
+
+Applied the design system across all pages using color variables, predefined H1–H6 typography, button styles, and font family.
+
+<SmartLink href='/work/personal-project-showcasing-work-skills/frontend-and-reusable-components' suffixIcon="arrowRight">
+    <Text variant="body-default-s">Config</Text>
+</SmartLink>
