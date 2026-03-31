@@ -1,350 +1,230 @@
----
-title: "Responsive Image Optimization"
----
+## Overview
 
-import {ActionList} from "../../../../components/ActionList";
+Implemented a performance-focused system that allows the browser to load the most suitable image size based on screen size.
 
-Implemented a performance-focused system using **Drupal Responsive Image Styles** to deliver optimized and responsive images across different devices. This allows the browser to choose the most appropriate image based on screen size, which reduces data usage and improves loading speed.
-
-**What Implemented:**
+## Types of Responsive Image Optimization
 
 <ActionList
     items={[
         {
             label: "Art Direction",
-            text: "Applied differently cropped images based on device size (desktop vs. mobile) in the following cases.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
+            text: "Applied differently cropped images based on device size (Desktop/Tablet/Mobile).",
             dialogs: [
                 {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
+                    label: 'Example - Window',
+                    title: 'Example',
                     modalCarousel: true,
                     modalCarouselItems: [
-                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1707346361/cld-sample-5.jpg", alt: "Image 1" },
-                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1707346358/samples/cup-on-a-table.jpg", alt: "Image 2" },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
                     ],
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
                 },
             ],
-            items: [
+            links: [
                 {
-                    label: "Cards",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Sliders",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Hero banners",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Example - Page',
                 },
             ],
         },
         {
             label: "Resolution Switching",
             text: "Rendered the same image aspect ratio in different resolutions across various devices in the following cases.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
             dialogs: [
                 {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
+                    label: 'Example - Window',
+                    title: 'Example',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
                 },
             ],
-            items: [
+            links: [
                 {
-                    label: "Cards",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Sliders",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Hero banners",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
+                    href: 'https://www.notion.so/Faculties-and-Departments-316009fc25b580328f50c2bb65d3ce50',
+                    label: 'Example - Page',
                 },
             ],
         },
         {
-            label: "WebP Converting",
+            label: "WebP Conversion",
             text: "Converted images to WebP format to reduce file size while keeping high visual quality.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
             dialogs: [
                 {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
+                    label: 'Example - Window',
+                    title: 'Example',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 1/v1769539331/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/1_qm1n38.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 2/v1769539571/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/2_nyxfvm.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 3/v1769539704/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/3_o8hepa.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 4/v1769540289/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/4_grkrgn.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 5/v1769540428/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/5_fpheez.png",
+                            alt: "Image 1"
+                        },
+                        {
+                            slide: "https://res.cloudinary.com/dpgad7fog/image/upload/t_View - Faculties and Departments - 6/v1769540516/Portfolio/SergGab%20University/View%20Structure/Faculties%20and%20Departments/6_iq1xzk.png",
+                            alt: "Image 1"
+                        },
+                    ],
                 },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
+            ],
+    },
+    ]}
+/>
+
+## Drupal Technical Details
+
+### Image Styles
+
+Created several image styles of different sizes with the same aspect ratio.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Configuration - Image Styles",
+            title: "Configuration - Image Styles",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+### Responsive Image Styles
+
+Created responsive image styles in which image styles are used; the usage differs in Art Direction and Resolution Switching.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Configuration - Responsive Image Styles",
+            title: "Configuration - Responsive Image Styles",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+        {
+            label: "Configuration - Art Direction",
+            title: "Configuration - Art Direction",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+        {
+            label: "Configuration - Resolution Switching",
+            title: "Configuration - Resolution Switching",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+### Media configuration
+
+#### Media Types
+
+Media entities have types. A custom media type called Image Widget Crops is defined with an image widget that supports crops.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Configuration - Media Type",
+            title: "Configuration - Media Type",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+#### Media View Modes
+
+Media also has view modes similar to content types. View modes are configured for the media type and responsive image styles are assigned to them.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Configuration",
+            title: "Configuration",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
+            ],
+        },
+    ]}
+/>
+
+#### Usage in Content View Modes
+
+In the content (or group) type view mode, the media field uses the Rendered entity formatter and the configured media view mode, which applies the responsive image style.
+
+<LightboxCarouselModal
+    items={[
+        {
+            label: "Configuration",
+            title: "Configuration",
+            items: [
+                { slide: <img src="/img1.jpg" /> },
             ],
         },
     ]}
