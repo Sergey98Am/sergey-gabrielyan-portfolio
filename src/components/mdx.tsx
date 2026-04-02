@@ -29,6 +29,7 @@ import {
 
 import {ActionList} from "@/components/ActionList";
 import {LightboxCarouselModal} from "@/components/LightboxCarouselModal";
+import {LinkGroup} from "@/components/LinkGroup";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -205,6 +206,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  LinkGroup,
   LightboxCarouselModal,
   ActionList,
 };

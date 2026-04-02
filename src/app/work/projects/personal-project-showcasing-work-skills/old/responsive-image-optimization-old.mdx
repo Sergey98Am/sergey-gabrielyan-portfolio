@@ -1,17 +1,166 @@
 ---
-title: "Flexible Academic"
+title: "Responsive Image Optimization"
 ---
 
-import {ActionList} from "../../../../components/ActionList";
+import {ActionList} from "../../../../../components/ActionList";
 
-Implemented a flexible academic structure to organize Faculties, Departments, and Educational Programs. Each one manages its own content, menus, and displays relevant blocks such as News, Events, and Educational Programs on the pages they belong to.
+Implemented a performance-focused system using **Drupal Responsive Image Styles** to deliver optimized and responsive images across different devices. This allows the browser to choose the most appropriate image based on screen size, which reduces data usage and improves loading speed.
 
 **What Implemented:**
 
 <ActionList
     items={[
         {
-            label: "Academic Hierarchy",
+            label: "Art Direction",
+            text: "Applied differently cropped images based on device size (desktop vs. mobile) in the following cases.",
+            links: [
+                {
+                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                    label: 'External',
+                },
+            ],
+            dialogs: [
+                {
+                    label: 'Label 1',
+                    title: 'Title 1',
+                    description: 'Description 1',
+                    modalCarousel: true,
+                    modalCarouselItems: [
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1707346361/cld-sample-5.jpg", alt: "Image 1" },
+                        { slide: "https://res.cloudinary.com/dpgad7fog/image/upload/v1707346358/samples/cup-on-a-table.jpg", alt: "Image 2" },
+                    ],
+                },
+                {
+                    label: 'Label 2',
+                    title: 'Title 2',
+                    description: 'Description 2',
+                    content: (
+                        <>
+                            <p>
+                                Implemented responsive image styles to ensure optimal image loading
+                                across devices and breakpoints.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            items: [
+                {
+                    label: "Cards",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Sliders",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+                {
+                    label: "Hero banners",
+                    links: [
+                        {
+                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
+                            label: 'External',
+                        },
+                    ],
+                    dialogs: [
+                        {
+                            label: 'Label 1',
+                            title: 'Title 1',
+                            description: 'Description 1',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                        {
+                            label: 'Label 2',
+                            title: 'Title 2',
+                            description: 'Description 2',
+                            content: (
+                                <>
+                                    <p>
+                                        Implemented responsive image styles to ensure optimal image loading
+                                        across devices and breakpoints.
+                                    </p>
+                                </>
+                            ),
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: "Resolution Switching",
+            text: "Rendered the same image aspect ratio in different resolutions across various devices in the following cases.",
             links: [
                 {
                     href: 'https://docs.once-ui.com/once-ui/components/dialog',
@@ -48,7 +197,7 @@ Implemented a flexible academic structure to organize Faculties, Departments, an
             ],
             items: [
                 {
-                    label: "Faculties",
+                    label: "Cards",
                     links: [
                         {
                             href: 'https://docs.once-ui.com/once-ui/components/dialog',
@@ -85,7 +234,7 @@ Implemented a flexible academic structure to organize Faculties, Departments, an
                     ],
                 },
                 {
-                    label: "Departments (belong to Faculties)",
+                    label: "Sliders",
                     links: [
                         {
                             href: 'https://docs.once-ui.com/once-ui/components/dialog',
@@ -122,81 +271,7 @@ Implemented a flexible academic structure to organize Faculties, Departments, an
                     ],
                 },
                 {
-                    label: "Educational Programs (belong to Faculties — required)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Educational Programs (can optionally belong to Departments)",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Programs are also linked to Degrees (e.g., B.A. → Undergraduate)",
+                    label: "Hero banners",
                     links: [
                         {
                             href: 'https://docs.once-ui.com/once-ui/components/dialog',
@@ -235,201 +310,8 @@ Implemented a flexible academic structure to organize Faculties, Departments, an
             ],
         },
         {
-            label: "Dedicated Pages & Content Display",
-            text: "A block of Educational Programs automatically appears on Faculty and Department pages or any page that belongs to a specific academic unit.",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-            ],
-        },
-        {
-            label: "Content Relationships",
-            text: "News and Events can belong to",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-            ],
-            items: [
-                {
-                    label: "Faculties",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-                {
-                    label: "Departments",
-                },
-                {
-                    label: "Educational Programs",
-                    links: [
-                        {
-                            href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                            label: 'External',
-                        },
-                    ],
-                    dialogs: [
-                        {
-                            label: 'Label 1',
-                            title: 'Title 1',
-                            description: 'Description 1',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                        {
-                            label: 'Label 2',
-                            title: 'Title 2',
-                            description: 'Description 2',
-                            content: (
-                                <>
-                                    <p>
-                                        Implemented responsive image styles to ensure optimal image loading
-                                        across devices and breakpoints.
-                                    </p>
-                                </>
-                            ),
-                        },
-                    ],
-                },
-            ]
-        },
-        {
-            label: "Dynamic Block Visibility",
-            text: "Group-based relationships ensure that only relevant content appears in the correct academic area (e.g., Faculty News on Faculty pages).",
-            links: [
-                {
-                    href: 'https://docs.once-ui.com/once-ui/components/dialog',
-                    label: 'External',
-                },
-            ],
-            dialogs: [
-                {
-                    label: 'Label 1',
-                    title: 'Title 1',
-                    description: 'Description 1',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    label: 'Label 2',
-                    title: 'Title 2',
-                    description: 'Description 2',
-                    content: (
-                        <>
-                            <p>
-                                Implemented responsive image styles to ensure optimal image loading
-                                across devices and breakpoints.
-                            </p>
-                        </>
-                    ),
-                },
-            ],
-        },
-        {
-            label: "Multilingual Menus",
-            text: "Each academic unit has its own separate menus (English & Armenian), allowing independent navigation structures per language for flexibility and clarity.",
+            label: "WebP Converting",
+            text: "Converted images to WebP format to reduce file size while keeping high visual quality.",
             links: [
                 {
                     href: 'https://docs.once-ui.com/once-ui/components/dialog',
