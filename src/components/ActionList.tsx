@@ -5,11 +5,11 @@ import {
     ListItem,
     Row,
     Column,
-    SmartLink,
     Text,
 } from "@once-ui-system/core";
 
 import { LightboxCarouselModal } from "@/components/LightboxCarouselModal";
+import { LinkGroup, LinkItem } from "@/components/LinkGroup";
 
 type ActionLink = {
     href: string;
@@ -25,7 +25,6 @@ type ActionDialog =
     | {
     modalCarousel: true;
     modalCarouselItems: SwiperItem[];
-
     label?: string;
     title?: string;
     description?: string;
@@ -33,7 +32,6 @@ type ActionDialog =
     | {
     modalCarousel?: false;
     content: React.ReactNode;
-
     label?: string;
     title?: string;
     description?: string;
@@ -52,68 +50,6 @@ type ActionListProps = {
 };
 
 export function ActionList({ items }: ActionListProps) {
-    const actions = (item: ActionListItem, index: number) => [
-        // 🔹 Links
-        ...(item.links?.map((link, linkIndex) => {
-            const { href, label } = link;
-
-            if (href.startsWith("/")) {
-                return (
-                    <SmartLink
-                        key={`link-${index}-${linkIndex}`}
-                        href={href}
-                        suffixIcon="arrowRight"
-                        style={{ margin: "0", width: "fit-content" }}
-                    >
-                        <Text variant="body-default-s">{label}</Text>
-                    </SmartLink>
-                );
-            }
-
-            if (href.startsWith("#")) {
-                return (
-                    <a
-                        key={`link-${index}-${linkIndex}`}
-                        href={href}
-                        style={{ margin: "0", width: "fit-content" }}
-                    >
-                        <Text variant="body-default-s">{label}</Text>
-                    </a>
-                );
-            }
-
-            return (
-                <SmartLink
-                    key={`link-${index}-${linkIndex}`}
-                    href={href}
-                    suffixIcon="arrowUpRightFromSquare"
-                    style={{ margin: "0", width: "fit-content" }}
-                >
-                    <Text variant="body-default-s">{label}</Text>
-                </SmartLink>
-            );
-        }) ?? []),
-
-        // 🔹 Dialogs → Lightbox
-        ...(item.dialogs?.length
-            ? [
-                <LightboxCarouselModal
-                    key={`lightbox-${index}`} // ✅ unique key
-                    inline // ✅ removes spacing inside ActionList
-                    items={item.dialogs.map((d) => ({
-                        label: d.label ?? "View details",
-                        title: d.title,
-                        description: d.description,
-                        items: d.modalCarousel
-                            ? d.modalCarouselItems
-                            : undefined,
-                        content: !d.modalCarousel ? d.content : undefined,
-                    }))}
-                />,
-            ]
-            : []),
-    ];
-
     return (
         <List>
             {items.map((item, index) => (
@@ -137,7 +73,32 @@ export function ActionList({ items }: ActionListProps) {
                         {/* 🔹 Actions */}
                         {(item.links?.length || item.dialogs?.length) && (
                             <Row gap="12" wrap>
-                                {actions(item, index)}
+                                {/* Links → LinkGroup */}
+                                {item.links?.length ? (
+                                    <LinkGroup
+                                        items={item.links as LinkItem[]}
+                                        gap="12"
+                                        wrap
+                                    />
+                                ) : null}
+
+                                {/* Dialogs */}
+                                {item.dialogs?.length ? (
+                                    <LightboxCarouselModal
+                                        inline
+                                        items={item.dialogs.map((d) => ({
+                                            label: d.label ?? "View details",
+                                            title: d.title,
+                                            description: d.description,
+                                            items: d.modalCarousel
+                                                ? d.modalCarouselItems
+                                                : undefined,
+                                            content: !d.modalCarousel
+                                                ? d.content
+                                                : undefined,
+                                        }))}
+                                    />
+                                ) : null}
                             </Row>
                         )}
                     </Column>

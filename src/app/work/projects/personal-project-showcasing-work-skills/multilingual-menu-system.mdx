@@ -2,21 +2,26 @@
 
 Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.
 
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Main Menu - English</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Main Menu - Armenian</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Local (page-specific) Menu - English</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Local (page-specific) Menu - Armenian</Text>
-</SmartLink>
+<LinkGroup
+    items={[
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Main Menu - English",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Main Menu - Armenian",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Local (page-specific) Menu - English",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Local (page-specific) Menu - Armenian",
+        },
+    ]}
+/>
 
 <LightboxCarouselModal
     items={[
@@ -36,4 +41,3 @@ Built separate English and Armenian menus for both main and local (page-specific
         },
     ]}
 />
-

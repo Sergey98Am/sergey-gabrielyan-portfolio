@@ -6,46 +6,55 @@ Built a flexible hero banner with short and tall variants and configurable text 
 
 The website includes two types of standard pages: a Basic Page, which is a regular informational page, and a Section Page, which can contain multiple related pages and has its own dedicated menu. Both page types allow customization of short or tall hero banners, with the option to position them inside or below the page header.
 
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Basic Page - Short</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Basic Page - Tall</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Section Page - Short</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Section Page - Tall</Text>
-</SmartLink>
+<LinkGroup
+    items={[
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Basic Page - Short",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Basic Page - Tall",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Section Page - Short",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Section Page - Tall",
+        },
+    ]}
+/>
 
 ## Usage in dedicated pages
 
 Used in Faculty, Department, Program, News, and Events pages. These pages only allow positioning content inside or below the banner, without the ability to customize the banner to short or tall sizes, to maintain consistent height.
 
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Faculty Page</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Department Page</Text>
-</SmartLink>
-
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Program Page</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">News Page</Text>
-</SmartLink>
-
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Events Page</Text>
-</SmartLink>
+<LinkGroup
+    items={[
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Faculty Page",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Department Page",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Program Page",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "News Page",
+        },
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Events Page",
+        },
+    ]}
+/>
 
 ## Drupal Technical Details
 
@@ -53,14 +62,26 @@ Used in Faculty, Department, Program, News, and Events pages. These pages only a
 
 Created a custom module called hero_banner. It renders the hero_banner view mode (a view mode created for all group and content types) and the content block for the view page in a custom block.
 
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Module Code</Text>
-</SmartLink>
+<LinkGroup
+    items={[
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Module Code",
+        },
+    ]}
+    gap="12"
+    wrap
+/>
 
 ### Media
 
 Used Short and Tall Responsive Image Styles with Art Direction
 
-<SmartLink href='http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Responsive Image Styles - Details</Text>
-</SmartLink>
+<LinkGroup
+    items={[
+        {
+            href: "http://localhost:3000/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Responsive Image Styles - Details",
+        },
+    ]}
+/>
