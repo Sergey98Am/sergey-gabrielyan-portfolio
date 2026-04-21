@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, ReactNode } from "react";
-import { Dialog, Column, Button, Swiper, Row } from "@once-ui-system/core";
+import React, { useState, ReactNode } from "react";
+import {Dialog, Column, Button, Swiper, Row, RowProps, Text} from "@once-ui-system/core";
 
 type SwiperItem = {
     slide: ReactNode;
@@ -20,32 +20,37 @@ type LightboxCarouselItem = {
 
 type LightboxCarouselModalProps = {
     items: LightboxCarouselItem[];
-    inline?: boolean; // 👈 controls spacing
+    inline?: boolean;
+    buttonSize?: "s" | "m" | "l";
+    marginTop?: RowProps["marginTop"];
+    marginBottom?: RowProps["marginBottom"];
 };
 
-export function LightboxCarouselModal({items, inline = false}: LightboxCarouselModalProps) {
+export function LightboxCarouselModal({items, inline = false, buttonSize="m", marginTop = "8", marginBottom = "12"}: LightboxCarouselModalProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <>
-            {/* 🔹 Buttons (triggers) */}
-            <Row
-                gap="12"
-                wrap
-                marginTop={!inline ? "12" : undefined}
-                marginBottom={!inline ? "12" : undefined}
-            >
-                {items.map((item, index) => (
-                    <Button
-                        key={`trigger-${index}`}
-                        size="s"
-                        label={item.label ?? "View details"}
-                        onClick={() => setOpenIndex(index)}
-                    />
-                ))}
-            </Row>
+            <Column marginTop={!inline ? marginTop : undefined} marginBottom={!inline ? marginBottom : undefined} gap="12">
+                <Text
+                    variant="label-default-xs"
+                    onBackground="neutral-weak">
+                    Media
+                </Text>
 
-            {/* 🔹 Modals */}
+                <Row gap="12" wrap>
+                    {items.map((item, index) => (
+                        <Button
+                            key={`trigger-${index}`}
+                            data-border="playful"
+                            size={buttonSize}
+                            label={item.label ?? "View details"}
+                            onClick={() => setOpenIndex(index)}
+                        />
+                    ))}
+                </Row>
+            </Column>
+
             {items.map((item, index) => {
                 const isOpen = openIndex === index;
 

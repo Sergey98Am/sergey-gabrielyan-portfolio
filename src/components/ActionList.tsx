@@ -5,7 +5,7 @@ import {
     ListItem,
     Row,
     Column,
-    Text,
+    Text, Line,
 } from "@once-ui-system/core";
 
 import { LightboxCarouselModal } from "@/components/LightboxCarouselModal";
@@ -53,18 +53,18 @@ export function ActionList({ items }: ActionListProps) {
     return (
         <List>
             {items.map((item, index) => (
-                <ListItem key={index} marginBottom="16">
-                    <Column gap="12">
+                <ListItem key={index}>
+                    <Column>
                         {/* 🔹 Content */}
-                        <Column gap="8" vertical="center">
+                        <Column vertical="center">
                             {item.label && (
-                                <Text as="span" variant="label-strong-l">
+                                <Text as="span" variant="label-strong-l" marginTop="4" marginBottom="8">
                                     {item.label}
                                 </Text>
                             )}
 
                             {item.text && (
-                                <Text as="p" style={{ lineHeight: "1.6" }}>
+                                <Text as="p" style={{ lineHeight: "1.6" }} marginTop="4" marginBottom="8">
                                     {item.text}
                                 </Text>
                             )}
@@ -72,12 +72,13 @@ export function ActionList({ items }: ActionListProps) {
 
                         {/* 🔹 Actions */}
                         {(item.links?.length || item.dialogs?.length) && (
-                            <Row gap="12" wrap>
+                            <Column>
                                 {/* Links → LinkGroup */}
                                 {item.links?.length ? (
                                     <LinkGroup
                                         items={item.links as LinkItem[]}
-                                        gap="12"
+                                        marginTop="4"
+                                        marginBottom="8"
                                         wrap
                                     />
                                 ) : null}
@@ -85,7 +86,9 @@ export function ActionList({ items }: ActionListProps) {
                                 {/* Dialogs */}
                                 {item.dialogs?.length ? (
                                     <LightboxCarouselModal
-                                        inline
+                                        marginTop="4"
+                                        marginBottom="8"
+                                        buttonSize="s"
                                         items={item.dialogs.map((d) => ({
                                             label: d.label ?? "View details",
                                             title: d.title,
@@ -99,7 +102,7 @@ export function ActionList({ items }: ActionListProps) {
                                         }))}
                                     />
                                 ) : null}
-                            </Row>
+                            </Column>
                         )}
                     </Column>
 
