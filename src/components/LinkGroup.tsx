@@ -2,6 +2,7 @@
 
 import React from "react";
 import {Row, SmartLink, RowProps, Text, Column} from "@once-ui-system/core";
+import {tr} from "date-fns/locale";
 
 export type LinkItem = {
     href: string;
@@ -12,20 +13,23 @@ type LinkGroupProps = {
     items: LinkItem[];
     gap?: RowProps["gap"];           // "8", "12", "16", "20", etc.
     wrap?: boolean;
+    showLabel?: boolean;
     marginTop?: RowProps["marginTop"];
     marginBottom?: RowProps["marginBottom"];
 } & Omit<RowProps, "children">;
 
-export function LinkGroup({items, gap = "12", wrap = true, marginTop = "8", marginBottom = "12", ...rowProps}: LinkGroupProps) {
+export function LinkGroup({items, gap = "12", wrap = true, showLabel = true, marginTop = "8", marginBottom = "12", ...rowProps}: LinkGroupProps) {
     if (!items || items.length === 0) return null;
 
     return (
         <Column marginTop={marginTop} marginBottom={marginBottom} gap="12">
-            <Text
-                variant="label-default-xs"
-                onBackground="neutral-weak">
-                Links
-            </Text>
+            {showLabel && (
+                <Text
+                    variant="label-default-xs"
+                    onBackground="neutral-weak">
+                    Links
+                </Text>
+            )}
 
             <Row gap={gap} wrap={wrap} {...rowProps}>
                 {items.map((link, index) => {

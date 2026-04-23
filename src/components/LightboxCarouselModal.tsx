@@ -2,6 +2,7 @@
 
 import React, { useState, ReactNode } from "react";
 import {Dialog, Column, Button, Swiper, Row, RowProps, Text} from "@once-ui-system/core";
+import {tr} from "date-fns/locale";
 
 type SwiperItem = {
     slide: ReactNode;
@@ -21,22 +22,25 @@ type LightboxCarouselItem = {
 type LightboxCarouselModalProps = {
     items: LightboxCarouselItem[];
     inline?: boolean;
+    showLabel?: boolean;
     buttonSize?: "s" | "m" | "l";
     marginTop?: RowProps["marginTop"];
     marginBottom?: RowProps["marginBottom"];
 };
 
-export function LightboxCarouselModal({items, inline = false, buttonSize="m", marginTop = "8", marginBottom = "12"}: LightboxCarouselModalProps) {
+export function LightboxCarouselModal({items, inline = false, showLabel = true, buttonSize="m", marginTop = "8", marginBottom = "12"}: LightboxCarouselModalProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <>
             <Column marginTop={!inline ? marginTop : undefined} marginBottom={!inline ? marginBottom : undefined} gap="12">
-                <Text
-                    variant="label-default-xs"
-                    onBackground="neutral-weak">
-                    Media
-                </Text>
+                {showLabel && (
+                    <Text
+                        variant="label-default-xs"
+                        onBackground="neutral-weak">
+                        Media
+                    </Text>
+                )}
 
                 <Row gap="12" wrap>
                     {items.map((item, index) => (
