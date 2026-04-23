@@ -47,9 +47,11 @@ type ActionListItem = {
 
 type ActionListProps = {
     items: ActionListItem[];
+    showLinkGroupLabel?: boolean;
+    showModalGroupLabel?: boolean;
 };
 
-export function ActionList({ items }: ActionListProps) {
+export function ActionList({ items, showLinkGroupLabel = true, showModalGroupLabel = true }: ActionListProps) {
     return (
         <List>
             {items.map((item, index) => (
@@ -77,6 +79,7 @@ export function ActionList({ items }: ActionListProps) {
                                 {item.links?.length ? (
                                     <LinkGroup
                                         items={item.links as LinkItem[]}
+                                        showLabel={showLinkGroupLabel}
                                         marginTop="4"
                                         marginBottom="8"
                                         wrap
@@ -86,6 +89,7 @@ export function ActionList({ items }: ActionListProps) {
                                 {/* Dialogs */}
                                 {item.dialogs?.length ? (
                                     <LightboxCarouselModal
+                                        showLabel={showModalGroupLabel}
                                         marginTop="4"
                                         marginBottom="8"
                                         buttonSize="s"

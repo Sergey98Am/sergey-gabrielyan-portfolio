@@ -11,7 +11,7 @@ link: "https://live-serggab-university.pantheonsite.io/"
 ---
 
 import {ActionList} from "../../../components/ActionList";
-import {SmartLink} from "@once-ui-system/core";
+import {LinkGroup} from "../../../components/LinkGroup";
 
 ## Overview
 
@@ -22,6 +22,8 @@ Development of the personal university project using skills gained from work exp
 Faculties can have Departments, and both can have Educational Programs (Programs are required to belong to a Faculty, but may optionally belong to a Department). Each one has its own menus, pages, and blocks such as News and Events. There are also global News and Events that are not tied to a specific Faculty/Department/Program.
 
 <ActionList
+    showLinkGroupLabel={false}
+    showModalGroupLabel={false}
     items={[
         {
             label: "Faculties and Departments",
@@ -57,13 +59,21 @@ Faculties can have Departments, and both can have Educational Programs (Programs
 
 Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.
 
-<SmartLink href='/work/personal-project-showcasing-work-skills/multilingual-menu-system' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Details</Text>
-</SmartLink>
+<LinkGroup
+    showLabel={false}
+    items={[
+        {
+            href: "/work/personal-project-showcasing-work-skills/multilingual-menu-system",
+            label: "Details",
+        },
+    ]}
+/>
 
 ## Presentation and Media
 
 <ActionList
+    showLinkGroupLabel={false}
+    showModalGroupLabel={false}
     items={[
         {
             label: "Hero Banner System",
@@ -101,6 +111,12 @@ Built separate English and Armenian menus for both main and local (page-specific
 
 Built a best-practice frontend architecture with flexible, reusable components that empower editors to build page layouts via drag-and-drop without requiring developer support.
 
-<SmartLink href='/work/personal-project-showcasing-work-skills/frontend-and-reusable-components' suffixIcon="arrowRight">
-    <Text variant="body-default-s">Details</Text>
-</SmartLink>
+<LinkGroup
+    showLabel={false}
+    items={[
+        {
+            href: "/work/personal-project-showcasing-work-skills/frontend-and-reusable-components",
+            label: "Details",
+        },
+    ]}
+/>
