@@ -65,7 +65,7 @@ export function LightboxCarouselModal({items, inline = false, showLabel = true, 
                         onClose={() => setOpenIndex(null)}
                         title={item.title ?? "Details"}
                         description={item.description}
-                        style={{ maxWidth: 900 }}
+                        style={{ maxWidth: 720 }}
                     >
                         <Column fillWidth gap="16" marginTop="12">
                             {item.items ? (
