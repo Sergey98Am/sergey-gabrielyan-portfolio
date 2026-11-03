@@ -1,41 +1,30 @@
-import { notFound } from "next/navigation";
-import { getPosts } from "@/utils/utils";
-import {
-  Meta,
-  AvatarGroup,
-  Column,
-  Heading,
-  Media,
-  Text,
-  SmartLink,
-  Row,
-  Line,
-} from "@once-ui-system/core";
-import { baseURL, work } from "@/resources";
-import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash, CustomMDX } from "@/components";
-import { Metadata } from "next";
+import { CustomMDX, ScrollToHash } from "@/components";
 import { Projects } from "@/components/work/Projects";
+import { baseURL, work } from "@/resources";
+import { getPosts, getTopLevelPosts, slugToTitle } from "@/utils/utils";
+import { Column, Heading, Line, Media, Meta, Row, SmartLink, Text } from "@once-ui-system/core";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Fragment } from "react";
+
+const projectsPath = ["src", "app", "work", "projects"];
+
+type ProjectProps = {
+  params: Promise<{ slug: string[] }>;
+};
+
+// Every project page is generated at build time, so any other /work/... URL is a real 404
+export const dynamicParams = false;
 
 export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
-    const posts = getPosts(["src", "app", "work", "projects"]);
-    return posts.map((post) => ({
-        slug: post.slug.split("/"), // <-- ALWAYS array ✔
-    }));
+  return getPosts(projectsPath).map((post) => ({
+    slug: post.slug.split("/"),
+  }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string | string[] }>;
-}): Promise<Metadata> {
-  const routeParams = await params;
-  const slugPath = Array.isArray(routeParams.slug)
-    ? routeParams.slug.join("/")
-    : routeParams.slug || "";
-
-  const posts = getPosts(["src", "app", "work", "projects"]);
-  let post = posts.find((post) => post.slug === slugPath);
+export async function generateMetadata({ params }: ProjectProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPosts(projectsPath).find((post) => post.slug === slug.join("/"));
 
   if (!post) return {};
 
@@ -43,93 +32,85 @@ export async function generateMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+    image:
+      post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
     path: `${work.path}/${post.slug}`,
   });
 }
 
-export default async function Project({
-  params,
-}: {
-  params: Promise<{ slug: string | string[] }>;
-}) {
-  const routeParams = await params;
-  const slugPath = Array.isArray(routeParams.slug)
-    ? routeParams.slug.join("/")
-    : routeParams.slug || "";
-
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+export default async function Project({ params }: ProjectProps) {
+  const { slug } = await params;
+  const posts = getPosts(projectsPath);
+  const post = posts.find((post) => post.slug === slug.join("/"));
 
   if (!post) {
     notFound();
   }
 
-  const isNested = slugPath.includes("/");
-  const segments = slugPath.split("/");
-  const parent = isNested ? segments[0] : null;
+  const isNested = slug.length > 1;
+  // The top-level project this page belongs to (the page itself when it isn't nested)
+  const projectSlug = slug[0];
 
-    const formatName = (name: string) => name.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+  // One breadcrumb per parent folder, e.g. "project" for "project/page".
+  // A folder without its own .mdx file is shown as plain text instead of a broken link.
+  const parents = slug.slice(0, -1).map((segment, index) => {
+    const parentSlug = slug.slice(0, index + 1).join("/");
+    const parent = posts.find((post) => post.slug === parentSlug);
 
-    // const avatars =
-  //   post.metadata.team?.map((person) => ({
-  //     src: person.avatar,
-  //   })) || [];
+    return {
+      slug: parentSlug,
+      title: parent?.metadata.title ?? slugToTitle(segment),
+      href: parent && `${work.path}/${parentSlug}`,
+    };
+  });
+
+  const hasRelatedProjects = getTopLevelPosts(projectsPath).some(
+    (project) => project.slug !== projectSlug,
+  );
 
   return (
     <Column as="section" maxWidth="m" horizontal="center" gap="l">
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
-          <Row gap="8" vertical="center">
-              <SmartLink href="/work">
-                  <Text variant="label-strong-m">Projects</Text>
-              </SmartLink>
-
-              {parent && (
-                  <>
-                      <Text as="span" onBackground="neutral-weak">/</Text>
-                      <SmartLink href={`/work/${parent}`}>
-                          <Text variant="label-strong-m">
-                              {formatName(parent)}
-                          </Text>
-                      </SmartLink>
-                  </>
+        <Row as="nav" aria-label="Breadcrumb" gap="8" wrap horizontal="center" vertical="center">
+          <SmartLink href={work.path}>
+            <Text variant="label-strong-m">Projects</Text>
+          </SmartLink>
+          {parents.map((parent) => (
+            <Fragment key={parent.slug}>
+              <Text as="span" aria-hidden onBackground="neutral-weak">
+                /
+              </Text>
+              {parent.href ? (
+                <SmartLink href={parent.href}>
+                  <Text variant="label-strong-m">{parent.title}</Text>
+                </SmartLink>
+              ) : (
+                <Text variant="label-strong-m" onBackground="neutral-weak">
+                  {parent.title}
+                </Text>
               )}
-          </Row>
-
-        <Heading variant={isNested ? "display-strong-s" : "display-strong-m"}>{post.metadata.title}</Heading>
+            </Fragment>
+          ))}
+        </Row>
+        <Heading variant={isNested ? "display-strong-s" : "display-strong-m"}>
+          {post.metadata.title}
+        </Heading>
       </Column>
-
-        {/*<Row marginBottom="32" horizontal="center">*/}
-      {/*  <Row gap="16" vertical="center">*/}
-      {/*    {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}*/}
-      {/*    <Text variant="label-default-m" onBackground="brand-weak">*/}
-      {/*      {post.metadata.team?.map((member, idx) => (*/}
-      {/*        <span key={idx}>*/}
-      {/*          {idx > 0 && (*/}
-      {/*            <Text as="span" onBackground="neutral-weak">*/}
-      {/*              ,{" "}*/}
-      {/*            </Text>*/}
-      {/*          )}*/}
-      {/*          <SmartLink href={member.linkedIn}>{member.name}</SmartLink>*/}
-      {/*        </span>*/}
-      {/*      ))}*/}
-      {/*    </Text>*/}
-      {/*  </Row>*/}
-      {/*</Row>*/}
       {post.metadata.images.length > 0 && (
         <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
-        <CustomMDX source={post.content} options={{
-            blockJS: false,
-        }} />
+        <CustomMDX source={post.content} options={{ blockJS: false }} />
       </Column>
-      <Column fillWidth gap="40" horizontal="center" marginTop="40">
-        <Line maxWidth="40" />
-        <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
-        </Heading>
-        <Projects exclude={[post.slug]} range={[2]} />
-      </Column>
+      {hasRelatedProjects && (
+        <Column fillWidth gap="40" horizontal="center" marginTop="40">
+          <Line maxWidth="40" />
+          <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
+            Related projects
+          </Heading>
+          <Projects exclude={[projectSlug]} />
+        </Column>
+      )}
       <ScrollToHash />
     </Column>
   );
