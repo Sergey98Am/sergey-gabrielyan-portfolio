@@ -30,6 +30,7 @@ import {
 import {ActionList} from "@/components/ActionList";
 import {LightboxCarouselModal} from "@/components/LightboxCarouselModal";
 import {LinkGroup} from "@/components/LinkGroup";
+import { SkillSections } from "@/components/SkillSections";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -209,6 +210,7 @@ const components = {
   LinkGroup,
   LightboxCarouselModal,
   ActionList,
+  SkillSections,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
