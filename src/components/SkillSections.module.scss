@@ -1,0 +1,187 @@
+// The whole header is clickable.
+.header {
+  position: relative;
+  isolation: isolate;
+}
+
+// Active state (open, hover, press): a circle behind the chevron and a highlighted top line.
+.chevron {
+  position: relative;
+}
+
+.chevron::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  z-index: -1;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--neutral-on-background-strong) 10%, transparent);
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+:global([data-theme="dark"]) .chevron::before {
+  background: color-mix(in srgb, var(--neutral-on-background-strong) 12%, transparent);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--neutral-on-background-strong);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.chevron::before,
+.header::after {
+  transition:
+    transform 150ms ease-in,
+    opacity 150ms ease-in;
+}
+
+// Open
+.section:has(.toggle[aria-expanded="true"]) .chevron::before {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 250ms ease-out;
+}
+
+.section:has(.toggle[aria-expanded="true"]) .header::after {
+  opacity: 0.6;
+  transform: scaleX(1);
+  transition:
+    transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 250ms ease-out;
+}
+
+.section:has(.toggle[aria-expanded="true"]) .chevron {
+  color: var(--neutral-on-background-strong);
+}
+
+// Hover (pointer devices only)
+@media (hover: hover) {
+  .section:hover .chevron::before {
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 250ms ease-out;
+  }
+
+  .section:hover .header::after {
+    opacity: 0.6;
+    transform: scaleX(1);
+    transition:
+      transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 250ms ease-out;
+  }
+
+  .section:hover .chevron {
+    color: var(--neutral-on-background-strong);
+  }
+}
+
+// Press
+.header:active .chevron::before {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.header:active::after {
+  opacity: 0.6;
+  transform: none;
+  transition: none;
+}
+
+// Inherited by the button.
+.header {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chevron::before,
+  .header::after,
+  .section:has(.toggle[aria-expanded="true"]) .chevron::before,
+  .section:has(.toggle[aria-expanded="true"]) .header::after,
+  .section:hover .chevron::before,
+  .section:hover .header::after {
+    transition: none;
+  }
+}
+
+// Keyboard focus
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 6px -12px;
+  z-index: -1;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--neutral-on-background-strong) 8%, transparent);
+  opacity: 0;
+}
+
+:global([data-theme="dark"]) .header::before {
+  background: color-mix(in srgb, var(--neutral-on-background-strong) 10%, transparent);
+}
+
+.header:has(.toggle:focus-visible)::before {
+  opacity: 1;
+  outline: 2px solid var(--brand-solid-strong);
+  outline-offset: 0;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+// Open/close animation
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 150ms ease-in,
+    opacity 150ms ease-in;
+}
+
+.panel.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition:
+    grid-template-rows 200ms ease-out,
+    opacity 200ms ease-out;
+}
+
+.inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+// No animation on restore or for reduced motion.
+.panel.instant {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .panel.open {
+    transition: none;
+  }
+}
+
+// Fallback for browsers without hidden="until-found".
+.panel[hidden]:not([hidden="until-found"]) {
+  display: none;
+}

@@ -10,113 +10,101 @@ codeLink: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/"
 link: "https://live-serggab-university.pantheonsite.io/"
 ---
 
-import {ActionList} from "../../../components/ActionList";
-import {LinkGroup} from "../../../components/LinkGroup";
-
 ## Overview
 
 Development of the personal university project using skills gained from work experience and new learnings.
 
-## Structure
+A bilingual (English and Armenian) university website built on Drupal 11.
 
-Faculties can have Departments, and both can have Educational Programs (Programs are required to belong to a Faculty, but may optionally belong to a Department). Each one has its own menus, pages, and blocks such as News and Events. There are also global News and Events that are not tied to a specific Faculty/Department/Program.
-
-<ActionList
-    showLinkGroupLabel={false}
-    showModalGroupLabel={false}
-    items={[
-        {
-            label: "Faculties and Departments",
-            links: [
-                {
-                    href: '/work/personal-project-showcasing-work-skills/faculties-and-departments',
-                    label: 'Details',
-                },
-            ],
-        },
-        {
-            label: "Educational Programs",
-            links: [
-                {
-                    href: '/work/personal-project-showcasing-work-skills/educational-programs',
-                    label: 'Details',
-                },
-            ],
-        },
-        {
-            label: "News and Events",
-            links: [
-                {
-                    href: '/work/personal-project-showcasing-work-skills/news-and-events',
-                    label: 'Details',
-                },
-            ],
-        },
-    ]}
-/>
-
-## Multilingual Menu System
-
-Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.
+Drupal 11 · Group · Paragraphs · Views · Search API · Content Moderation · Twig and Single Directory Components · Tailwind CSS · Alpine.js · GitLab CI · Pantheon
 
 <LinkGroup
     showLabel={false}
     items={[
-        {
-            href: "/work/personal-project-showcasing-work-skills/multilingual-menu-system",
-            label: "Details",
-        },
+        { href: "https://live-serggab-university.pantheonsite.io/", label: "Live site" },
+        { href: "https://gitlab.com/sergey.gabrielyan1998/serggab-university/", label: "Source code" },
     ]}
 />
 
-## Presentation and Media
-
-<ActionList
-    showLinkGroupLabel={false}
-    showModalGroupLabel={false}
-    items={[
+<SkillSections
+    sections={[
         {
-            label: "Hero Banner System",
-            text: "Built a flexible hero banner with short and tall variants and configurable text placement (on or below the banner). Key content types use a fixed layout with limited text positioning to ensure consistency.",
-            links: [
-                {
-                    href: '/work/personal-project-showcasing-work-skills/hero-banner-system',
-                    label: 'Details',
-                },
+            id: "structure",
+            title: "Structure",
+            summary: "Faculties, Departments, Educational Programs and Site Sections are Drupal groups, each with its own pages, menus, news and events.",
+            intro: "Faculties can have Departments, and both can have Educational Programs (Programs are required to belong to a Faculty, but may optionally belong to a Department). Each one has its own menus, pages, and blocks such as News and Events. There are also global News and Events that are not tied to a specific Faculty/Department/Program.",
+            items: [
+                { label: "Faculties and Departments", text: "Departments belong to one Faculty; each unit has its own pages and menus.", links: [{ href: "/work/personal-project-showcasing-work-skills/faculties-and-departments", label: "Details" }] },
+                { label: "Educational Programs", text: "Degree pages are generated and kept in sync from each program's degrees.", links: [{ href: "/work/personal-project-showcasing-work-skills/educational-programs", label: "Details" }] },
+                { label: "Site Sections", text: "Standalone areas like the Innovation Center, with their own sub-theme." },
             ],
         },
         {
-            label: "Responsive Image Optimization",
-            text: "Implemented a performance-focused system that allows the browser to load the most suitable image size based on screen size.",
-            links: [
-                {
-                    href: '/work/personal-project-showcasing-work-skills/responsive-image-optimization',
-                    label: 'Details',
-                },
+            id: "content-and-listings",
+            title: "Content and Listings",
+            summary: "News, events, conferences, documents, videos, staff and live research publications, each listed sitewide and per Faculty or Department.",
+            intro: "Each content type has a sitewide listing and one per Faculty or Department.",
+            items: [
+                { label: "News and Events", text: "Related items by shared categories and time zones for international events.", links: [{ href: "/work/personal-project-showcasing-work-skills/news-and-events", label: "Details" }] },
+                { label: "Conferences", text: "Owned by a Faculty or Department, with their own dates, venue and pages." },
+                { label: "Documents", text: "Regulations and forms with files; PDF, Word and Excel open in a preview." },
+                { label: "Videos", text: "YouTube and uploaded videos; missing lengths are filled in automatically." },
+                { label: "Staff", text: "Profiles with roles, position, office hours and contacts, listed per unit." },
+                { label: "Publications", text: "Read live from an external research API, never stored in Drupal." },
             ],
         },
         {
-            label: "Manual Cropping",
-            links: [
-                {
-                    href: '/work/experience-based-university-project/responsive-image-optimization',
-                    label: 'Details',
-                },
+            id: "page-building-and-media",
+            title: "Page Building and Media",
+            summary: "Drag-and-drop components, live News and Events blocks, a hero banner with image and video slides, and responsive images with manual cropping.",
+            intro: "Built a best-practice frontend architecture with flexible, reusable components that empower editors to build page layouts via drag-and-drop without requiring developer support.",
+            items: [
+                { label: "Reusable Components", text: "17 Paragraph components: accordions, tabs, cards, carousels and more.", links: [{ href: "/work/personal-project-showcasing-work-skills/frontend-and-reusable-components", label: "Details" }] },
+                { label: "Dynamic Blocks", text: "Editors add live News, Events or Program lists as carousel, grid or list." },
+                { label: "Hero Banner System", text: "One banner or a carousel of image and video slides, short or tall.", links: [{ href: "/work/personal-project-showcasing-work-skills/hero-banner-system", label: "Details" }] },
+                { label: "Responsive Image Optimization", text: "Implemented a performance-focused system that allows the browser to load the most suitable image size based on screen size. Editors also crop each image for seven ratios.", links: [{ href: "/work/personal-project-showcasing-work-skills/responsive-image-optimization", label: "Details" }] },
             ],
         },
-    ]}
-/>
-
-## Frontend and Reusable Components
-
-Built a best-practice frontend architecture with flexible, reusable components that empower editors to build page layouts via drag-and-drop without requiring developer support.
-
-<LinkGroup
-    showLabel={false}
-    items={[
         {
-            href: "/work/personal-project-showcasing-work-skills/frontend-and-reusable-components",
-            label: "Details",
+            id: "search",
+            title: "Search",
+            summary: "Search API site search with grouped results and Faculty and Department filters that also finds publications and text inside files.",
+            intro: "Built with Search API: one index for the whole site and one for each listing.",
+            items: [
+                { label: "Site Search", text: "Grouped results and unit filters; finds publications and text inside files." },
+                { label: "Listing Filters", text: "Each listing has its own index; filters stay in the URL, no page reload." },
+            ],
+        },
+        {
+            id: "editorial-workflow",
+            title: "Editorial Workflow",
+            summary: "Draft, review and publish for every unit, a sitewide approval step for the main site, roles per unit and email notifications.",
+            intro: "One workflow for all content, from Draft to Published, with revision diffs.",
+            items: [
+                { label: "Sitewide Approval", text: "Faculty and Department content goes sitewide only after central approval." },
+                { label: "Roles and Permissions", text: "Author, Editor and Administrator roles in each unit, for its own content." },
+                { label: "Email Notifications", text: "Five emails across the workflow; every user can turn them off." },
+            ],
+        },
+        {
+            id: "multilingual",
+            title: "Multilingual",
+            summary: "Separate English and Armenian menus for main and page-level navigation, and an admin interface translated into Armenian.",
+            intro: "",
+            items: [
+                { label: "Multilingual Menu System", text: "Built separate English and Armenian menus for both main and local (page-specific) navigation, allowing full navigation control with different counts and ordering per language and avoiding forced translation when no equivalent exists.", links: [{ href: "/work/personal-project-showcasing-work-skills/multilingual-menu-system", label: "Details" }] },
+                { label: "Armenian Admin Interface", text: "1,100+ configuration items translated, so editors can work in Armenian." },
+            ],
+        },
+        {
+            id: "theme-and-deployment",
+            title: "Theme and Deployment",
+            summary: "A Starterkit theme with Single Directory Components, Tailwind CSS and Alpine.js, a section sub-theme, and GitLab CI/CD to Pantheon.",
+            intro: "",
+            items: [
+                { label: "Custom Theme", text: "Starterkit theme with 45 SDC components, Tailwind CSS and Alpine.js." },
+                { label: "CI/CD to Pantheon", text: "GitLab CI deploys to Pantheon, then runs updates, config import and hooks." },
+            ],
         },
     ]}
 />
