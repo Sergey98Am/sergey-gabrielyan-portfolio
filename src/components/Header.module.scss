@@ -19,3 +19,35 @@
         bottom: 0;
     }
 }
+
+// Menu: label size, item height and current page style.
+.menu.menu {
+    --font-size-label-s: var(--font-size-label-m);
+    --line-height-label-s: var(--line-height-label-m);
+
+    :global(.button) {
+        height: 2.25rem;
+        min-height: 2.25rem;
+        border-radius: 1.25rem;
+    }
+
+    :global(.button) svg {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    :global(.button)[aria-current="page"] {
+        background: var(--brand-alpha-weak);
+        border-color: transparent;
+        color: var(--brand-on-background-medium);
+    }
+
+    :global(.button)[aria-current="page"] :global(.font-label) {
+        font-weight: 500;
+    }
+}
+
+:global([data-theme="dark"]) .menu.menu :global(.button)[aria-current="page"] {
+    background: var(--brand-alpha-medium);
+    color: var(--neutral-on-background-strong);
+}

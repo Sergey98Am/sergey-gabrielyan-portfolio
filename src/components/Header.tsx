@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Fade, Flex, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, home, about, work } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
@@ -77,68 +77,94 @@ export const Header = () => {
         </Row>
         <Row fillWidth horizontal="center">
           <Row
-            background="page"
-            border="neutral-alpha-weak"
-            radius="m-4"
-            shadow="l"
-            padding="4"
-            horizontal="center"
+            className={styles.menu}
+            gap="4"
+            vertical="center"
+            textVariant="body-default-s"
             zIndex={1}
+            suppressHydrationWarning
           >
-            <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
-              {routes["/"] && (
+            {routes["/"] && (
+              <Row
+                background="page"
+                border="neutral-alpha-weak"
+                radius="full"
+                shadow="l"
+                padding="4"
+              >
                 <ToggleButton
-                    prefixIcon="home"
-                    href="/"
-                    label={home.label}
-                    selected={pathname === "/"} />
-              )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href="/about"
-                      label={about.label}
-                      selected={pathname === "/about"}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href="/about"
-                      selected={pathname === "/about"}
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/work"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      label={work.label}
-                      selected={pathname.startsWith("/work")}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      selected={pathname.startsWith("/work")}
-                    />
-                  </Row>
-                </>
-              )}
-              {display.themeSwitcher && (
-                <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
-                </>
-              )}
-            </Row>
+                  prefixIcon="home"
+                  href="/"
+                  aria-label={home.label}
+                  selected={pathname === "/"}
+                  aria-current={pathname === "/" ? "page" : undefined}
+                />
+              </Row>
+            )}
+            {(routes["/about"] || routes["/work"]) && (
+              <Row
+                background="page"
+                border="neutral-alpha-weak"
+                radius="full"
+                shadow="l"
+                padding="4"
+                gap="4"
+              >
+                {routes["/about"] && (
+                  <>
+                    <Row s={{ hide: true }}>
+                      <ToggleButton
+                        prefixIcon="person"
+                        href="/about"
+                        label={about.label}
+                        selected={pathname === "/about"}
+                        aria-current={pathname === "/about" ? "page" : undefined}
+                      />
+                    </Row>
+                    <Row hide s={{ hide: false }}>
+                      <ToggleButton
+                        prefixIcon="person"
+                        href="/about"
+                        selected={pathname === "/about"}
+                        aria-current={pathname === "/about" ? "page" : undefined}
+                      />
+                    </Row>
+                  </>
+                )}
+                {routes["/work"] && (
+                  <>
+                    <Row s={{ hide: true }}>
+                      <ToggleButton
+                        prefixIcon="grid"
+                        href="/work"
+                        label={work.label}
+                        selected={pathname.startsWith("/work")}
+                        aria-current={pathname.startsWith("/work") ? "page" : undefined}
+                      />
+                    </Row>
+                    <Row hide s={{ hide: false }}>
+                      <ToggleButton
+                        prefixIcon="grid"
+                        href="/work"
+                        selected={pathname.startsWith("/work")}
+                        aria-current={pathname.startsWith("/work") ? "page" : undefined}
+                      />
+                    </Row>
+                  </>
+                )}
+              </Row>
+            )}
+            {display.themeSwitcher && (
+              <Row
+                background="page"
+                border="neutral-alpha-weak"
+                radius="full"
+                shadow="l"
+                padding="4"
+              >
+                <ThemeToggle />
+              </Row>
+            )}
           </Row>
         </Row>
         <Flex fillWidth horizontal="end" vertical="center">
