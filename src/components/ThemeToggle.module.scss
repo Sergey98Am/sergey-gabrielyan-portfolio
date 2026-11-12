@@ -8,3 +8,16 @@
     height: 1em;
   }
 }
+
+// Show the button for switching to the other theme.
+.toggle.toLight {
+  display: none;
+}
+
+:global([data-theme="dark"]) .toggle.toLight {
+  display: flex;
+}
+
+:global([data-theme="dark"]) .toggle.toDark {
+  display: none;
+}
