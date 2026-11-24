@@ -20,6 +20,18 @@
     }
 }
 
+// Fade behind the bottom menu.
+.bottomFade.bottomFade {
+    background: linear-gradient(
+        0deg,
+        var(--page-background) 25%,
+        color-mix(in srgb, var(--page-background) 78%, transparent) 60%,
+        color-mix(in srgb, var(--page-background) 40%, transparent) 80%,
+        transparent
+    );
+    mask-image: linear-gradient(0deg, #000 38%, rgba(0, 0, 0, 0.8) 58%, rgba(0, 0, 0, 0.4) 78%, transparent);
+}
+
 // Menu: label size, item height and current page style.
 .menu.menu {
     --font-size-label-s: var(--font-size-label-m);

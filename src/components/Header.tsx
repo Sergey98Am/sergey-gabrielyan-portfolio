@@ -49,13 +49,15 @@ export const Header = () => {
     <>
       <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
       <Fade
+        className={styles.bottomFade}
         hide
         s={{ hide: false }}
         fillWidth
         position="fixed"
         bottom="0"
         to="top"
-        height="80"
+        height={6}
+        pointerEvents="none"
         zIndex={9}
       />
       <Row
@@ -87,7 +89,7 @@ export const Header = () => {
             {routes["/"] && (
               <Row
                 background="page"
-                border="neutral-alpha-weak"
+                border="neutral-alpha-medium"
                 radius="full"
                 shadow="l"
                 padding="4"
@@ -104,7 +106,7 @@ export const Header = () => {
             {(routes["/about"] || routes["/work"]) && (
               <Row
                 background="page"
-                border="neutral-alpha-weak"
+                border="neutral-alpha-medium"
                 radius="full"
                 shadow="l"
                 padding="4"
@@ -157,7 +159,7 @@ export const Header = () => {
             {display.themeSwitcher && (
               <Row
                 background="page"
-                border="neutral-alpha-weak"
+                border="neutral-alpha-medium"
                 radius="full"
                 shadow="l"
                 padding="4"
